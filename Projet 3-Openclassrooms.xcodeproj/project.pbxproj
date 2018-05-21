@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2013B2220B2C9AE00E3C161 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2120B2C9AE00E3C161 /* main.swift */; };
+		A2013B2F20B2CAE100E3C161 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2820B2CAE000E3C161 /* Fighter.swift */; };
+		A2013B3020B2CAE100E3C161 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2920B2CAE000E3C161 /* Team.swift */; };
+		A2013B3120B2CAE100E3C161 /* Dwarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2A20B2CAE000E3C161 /* Dwarf.swift */; };
+		A2013B3220B2CAE100E3C161 /* Giant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2B20B2CAE000E3C161 /* Giant.swift */; };
+		A2013B3320B2CAE100E3C161 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2C20B2CAE100E3C161 /* Game.swift */; };
+		A2013B3420B2CAE100E3C161 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2D20B2CAE100E3C161 /* Mage.swift */; };
+		A2013B3520B2CAE100E3C161 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2E20B2CAE100E3C161 /* Character.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2013B1C20B2C9AB00E3C161 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2013B1E20B2C9AD00E3C161 /* Projet 3-Openclassrooms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Projet 3-Openclassrooms"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2013B2120B2C9AE00E3C161 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A2013B2820B2CAE000E3C161 /* Fighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
+		A2013B2920B2CAE000E3C161 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		A2013B2A20B2CAE000E3C161 /* Dwarf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dwarf.swift; sourceTree = "<group>"; };
+		A2013B2B20B2CAE000E3C161 /* Giant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Giant.swift; sourceTree = "<group>"; };
+		A2013B2C20B2CAE100E3C161 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A2013B2D20B2CAE100E3C161 /* Mage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		A2013B2E20B2CAE100E3C161 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2013B1B20B2C9AB00E3C161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2013B1520B2C9A800E3C161 = {
+			isa = PBXGroup;
+			children = (
+				A2013B2020B2C9AD00E3C161 /* Projet 3-Openclassrooms */,
+				A2013B1F20B2C9AD00E3C161 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2013B1F20B2C9AD00E3C161 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2013B1E20B2C9AD00E3C161 /* Projet 3-Openclassrooms */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2013B2020B2C9AD00E3C161 /* Projet 3-Openclassrooms */ = {
+			isa = PBXGroup;
+			children = (
+				A2013B2E20B2CAE100E3C161 /* Character.swift */,
+				A2013B2A20B2CAE000E3C161 /* Dwarf.swift */,
+				A2013B2820B2CAE000E3C161 /* Fighter.swift */,
+				A2013B2C20B2CAE100E3C161 /* Game.swift */,
+				A2013B2B20B2CAE000E3C161 /* Giant.swift */,
+				A2013B2D20B2CAE100E3C161 /* Mage.swift */,
+				A2013B2920B2CAE000E3C161 /* Team.swift */,
+				A2013B2120B2C9AE00E3C161 /* main.swift */,
+			);
+			path = "Projet 3-Openclassrooms";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2013B1D20B2C9AB00E3C161 /* Projet 3-Openclassrooms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2013B2520B2C9AE00E3C161 /* Build configuration list for PBXNativeTarget "Projet 3-Openclassrooms" */;
+			buildPhases = (
+				A2013B1A20B2C9AB00E3C161 /* Sources */,
+				A2013B1B20B2C9AB00E3C161 /* Frameworks */,
+				A2013B1C20B2C9AB00E3C161 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Projet 3-Openclassrooms";
+			productName = "Projet 3-Openclassrooms";
+			productReference = A2013B1E20B2C9AD00E3C161 /* Projet 3-Openclassrooms */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2013B1620B2C9AA00E3C161 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Michael Aidan";
+				TargetAttributes = {
+					A2013B1D20B2C9AB00E3C161 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A2013B1920B2C9AA00E3C161 /* Build configuration list for PBXProject "Projet 3-Openclassrooms" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A2013B1520B2C9A800E3C161;
+			productRefGroup = A2013B1F20B2C9AD00E3C161 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2013B1D20B2C9AB00E3C161 /* Projet 3-Openclassrooms */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2013B1A20B2C9AB00E3C161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2013B3020B2CAE100E3C161 /* Team.swift in Sources */,
+				A2013B3320B2CAE100E3C161 /* Game.swift in Sources */,
+				A2013B2220B2C9AE00E3C161 /* main.swift in Sources */,
+				A2013B3120B2CAE100E3C161 /* Dwarf.swift in Sources */,
+				A2013B2F20B2CAE100E3C161 /* Fighter.swift in Sources */,
+				A2013B3220B2CAE100E3C161 /* Giant.swift in Sources */,
+				A2013B3420B2CAE100E3C161 /* Mage.swift in Sources */,
+				A2013B3520B2CAE100E3C161 /* Character.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A2013B2320B2C9AE00E3C161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2013B2420B2C9AE00E3C161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		A2013B2620B2C9AE00E3C161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CR2JWCSKR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A2013B2720B2C9AE00E3C161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CR2JWCSKR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2013B1920B2C9AA00E3C161 /* Build configuration list for PBXProject "Projet 3-Openclassrooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2013B2320B2C9AE00E3C161 /* Debug */,
+				A2013B2420B2C9AE00E3C161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2013B2520B2C9AE00E3C161 /* Build configuration list for PBXNativeTarget "Projet 3-Openclassrooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2013B2620B2C9AE00E3C161 /* Debug */,
+				A2013B2720B2C9AE00E3C161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2013B1620B2C9AA00E3C161 /* Project object */;
+}
