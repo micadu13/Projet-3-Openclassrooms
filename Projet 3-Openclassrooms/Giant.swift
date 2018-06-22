@@ -7,3 +7,10 @@
 //
 
 import Foundation
+class Giant:Character
+{
+    init(name:String)
+    {
+        super.init(name:name,life: 200,attaque: 5,resistance: 50,arme:"Poings")
+    }
+}

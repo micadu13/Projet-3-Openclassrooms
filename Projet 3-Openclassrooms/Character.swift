@@ -8,27 +8,31 @@
 
 import Foundation
 
-enum Charactertype
-{
-    case Fighter
-    case Mage
-    case Giant
-    case Dwarf
-}
-
-
 
 class Character
 {
-    var name:String
-    var attaque:Int = 50
-    var arme:String = "Epee"
-    var resistance:Int
     
-    
-    init(name:String,attaque:Int,arme:String,resistance:Int)
+    enum charactertype
     {
-        self.name = name; self.attaque = attaque;self.arme = arme;self.resistance = resistance
+        case Fighter
+        case Mage
+        case Giant
+        case Dwarf
+    }
+    var name:String
+    var life:Int
+    var attaque:Int
+    var resistance:Int
+    var arme:String
+    
+    init(name:String,life:Int,attaque:Int,resistance:Int,arme:String)
+    {
+        self.name = name;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
+    }
+        
+    func atk(cible:Character)
+    {
+        cible.life -= self.attaque
     }
 }
 

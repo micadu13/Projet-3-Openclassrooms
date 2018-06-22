@@ -7,3 +7,12 @@
 //
 
 import Foundation
+class Dwarf:Character
+{
+    init(name:String)
+    {
+        
+        super.init(name:name,life: 60,attaque: 40,resistance: 10,arme:"Hache")
+        
+    }
+}
