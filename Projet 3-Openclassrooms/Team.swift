@@ -11,19 +11,27 @@ class Team
 {
    
     
-    var name:String=""
+    var name:String = ""
     var nom_combattant:String = ""
     var nom_mage:String = ""
     var nom_giant:String = ""
     var nom_dwarf:String = ""
     var members:[Character]=[]
-    
-  
+   
     
     init()
     {
+    
+       
+        self.setTeamName()
+        self.printName()
+        self.chooseCharacter()
+ 
+       
         
     }
+    
+ 
     
     func setTeamName()
     {
@@ -66,16 +74,16 @@ class Team
                     {
                         if nom_combattant != ""
                         {
-                            self.nom_combattant = nom_combattant
-                            print("Veuillez svp nommer votre combatant")
+                            let combattant = Fighter(name:(nom_combattant))
+                            print("Votre personnage de type Fighter s'appelle \(nom_combattant)")
+                            members.append(combattant)
                         }
-                        let combattant = Fighter(name:(nom_combattant))
-                        print("Votre personnage de type Fighter s'appelle \(nom_combattant)")
-                        members.append(combattant)
+                        else
+                        {
+                            print("Veuillez nommer le personnage")
+                        }
+                       
                     }
-                    
-                    
-                   
                     
                     case "2":
                     print("Vous avez choisi le Mage")
@@ -84,8 +92,7 @@ class Team
                     {
                         if nom_mage != ""
                         {
-                            self.nom_mage = nom_mage
-                            print("Veuillez svp nommer votre mage. Attention chaque nom de personnage doit être unique")
+                           
                             if(nom_combattant != nom_mage)
                             {
                                 let mage = Mage(name:(nom_mage))

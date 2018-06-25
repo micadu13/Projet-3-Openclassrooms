@@ -9,11 +9,8 @@
 import Foundation
 class Game {
     
-    
- 
     var player1:Team
     var player2:Team
-    
     
     init()
     {
@@ -21,14 +18,11 @@ class Game {
         
         print("Joueur 1, veuillez svp nommer votre équipe")
         self.player1 = Team()
-        self.player1.setTeamName()
-        self.player1.printName()
-        self.player1.chooseCharacter()
+        
+       
         print("Joueur 2, veuillez svp nommer votre équipe")
         self.player2 = Team()
-        self.player2.setTeamName()
-        self.player2.printName()
-        self.player2.chooseCharacter()
+       
         
     }
     
