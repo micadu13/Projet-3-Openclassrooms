@@ -108,22 +108,10 @@ class Team
                     {
                         if nom_giant != ""
                         {
-                            self.nom_giant = nom_giant
-                            print("Veuillez svp nommer votre colosse. Attention chaque nom de personnage doit être unique")
-                            if(nom_giant != nom_mage && nom_giant != nom_combattant)
-                            {
-                                let giant = Giant(name:(nom_giant))
+                             let giant = Giant(name:(nom_giant))
                                 print("Votre personnage de type Colosse s'appelle \(nom_giant)")
                                 members.append(giant)
-                            }
-                            else
-                            {
-                                print("Attention, chaque nom de personnage doit être unique !")
-                                print("Veuillez svp à nouveau saisir un nom de personnage poir le colosse")
-                                let giant = Giant(name:(nom_giant))
-                                print("Votre personnage de type Colosse s'appelle \(nom_giant)")
-                                members.append(giant)
-                            }
+                          
                         }
                         
                     }
@@ -135,22 +123,10 @@ class Team
                     {
                         if nom_dwarf != ""
                         {
-                            self.nom_dwarf = nom_dwarf
-                             print("Veuillez svp nommer votre nain. Attention chaque nom de personnage doit être unique")
-                            if(nom_dwarf != nom_combattant && nom_dwarf != nom_mage && nom_dwarf != nom_giant)
-                            {
-                                let dwarf = Dwarf(name:(nom_dwarf))
+                             let dwarf = Dwarf(name:(nom_dwarf))
                                 print("Votre personnage de type Mage s'appelle \(nom_dwarf)")
                                 members.append(dwarf)
-                            }
-                            else
-                            {
-                                print("Attention, chaque nom de personnage doit être unique !")
-                                print("Veuillez svp à nouveau saisir un nom de personnage poir le nain")
-                                let dwarf = Dwarf(name:(nom_dwarf))
-                                print("Votre personnage de type Mage s'appelle \(nom_dwarf)")
-                                members.append(dwarf)
-                            }
+                            
                         }
                         
                     }
