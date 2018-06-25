@@ -93,20 +93,9 @@ class Team
                         if nom_mage != ""
                         {
                            
-                            if(nom_combattant != nom_mage)
-                            {
-                                let mage = Mage(name:(nom_mage))
+                            let mage = Mage(name:(nom_mage))
                                 print("Votre personnage de type Mage s'appelle \(nom_mage)")
                                 members.append(mage)
-                            }
-                            else
-                            {
-                                print("Attention, chaque nom de personnage doit être unique !")
-                                print("Veuillez svp à nouveau saisir un nom de personnage poir le mage")
-                                let mage = Mage(name:(nom_mage))
-                                print("Votre personnage de type Mage s'appelle \(nom_mage)")
-                                members.append(mage)
-                            }
                             
                         }
                         
