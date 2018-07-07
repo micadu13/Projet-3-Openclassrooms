@@ -51,11 +51,38 @@ class Team
         while(i<3)
         {
             print("Veuillez choisir un personnage dans la liste suivante: "
-                + "\n1: Un Guerrier"
+                + "\n1: Un Fighter"
                 + "\n2: Un Mage"
-                + "\n3: Un Colosse"
-                + "\n4: Un nain")
-            
+                + "\n3: Un Giant"
+                + "\n4: Un Dwarf")
+            if let choice = readLine()
+            {
+                switch choice
+                {
+                    case "1":
+                    print("Vous avez choisi le Fighter")
+                    print("Veuillez nommer votre personnage")
+                    let fighter_name = readLine()
+                
+                    if(checkuniquename(fighter_name!) == true)
+                    {
+                        var fighter = Fighter(name: fighter_name!)
+                        members.append(fighter)
+                        print("Vous avez choisi de nommer votre personnage \(String(describing: fighter_name))")
+                        i += 1
+                    }
+                    
+                    
+                case "2":
+                print("Vous avez choisi le Mage")
+                case "3":
+                print("Vous avez choisi le Giant")
+                case "4":
+                print("Vous avez choisi le Dwarf")
+                default:
+                print("Je ne comprends pas, veuillez rééssayer")
+                }
+            }
         
         
             
