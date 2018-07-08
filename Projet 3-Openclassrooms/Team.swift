@@ -44,12 +44,19 @@ class Team
         print("Le nom de votre équipe est \(self.name)")
     }
     
-    
     func chooseCharacter()
     {
         var i = 0
         while(i<3)
         {
+            presentationCharacter()
+            i += 1
+        }
+    }
+    
+    
+    func presentationCharacter()
+    {
             print("Veuillez choisir un personnage dans la liste suivante: "
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
@@ -61,33 +68,27 @@ class Team
                 {
                     case "1":
                     print("Vous avez choisi le Fighter")
-                    
-                    print("Veuillez nommer votre personnage")
-                    let fighter_name = readLine()
-                   
+                    print("Veuillez nommer votre fighter")
+                    var fighter_name = readLine()
                     if(checkuniquename(fighter_name!) == true)
                     {
-                        let fighter = Fighter(name: fighter_name!)
+                        Team.characters_name.append(fighter_name!)
+                        var fighter = Fighter(name:fighter_name!)
                         members.append(fighter)
-                        print("Vous avez choisi de nommer votre personnage \(fighter_name!)")
-                        i += 1
                     }
                     else
                     {
-                        print("Merci de bien vouloir rééssayer")
-                        while(checkuniquename(fighter_name!) == true)
+                        print("Le nom de chaque personnage doit être unique")
+                        print("Veuillez svp nommer votre fighter")
+                        if (checkuniquename(fighter_name!) == true)
                         {
-                            let fighter = Fighter(name: fighter_name!)
+                            Team.characters_name.append(fighter_name!)
+                            var fighter = Fighter(name:fighter_name!)
                             members.append(fighter)
-                            print("Vous avez choisi de nommer votre personnage \(fighter_name!)")
-                            i += 1
                         }
                     }
-                    
-                    
-                    
-                case "2":
-                print("Vous avez choisi le Mage")
+                    case "2":
+                    print("Vous avez choisi le Mage")
                 case "3":
                 print("Vous avez choisi le Giant")
                 case "4":
@@ -100,7 +101,7 @@ class Team
         
             
             
-        }
+        
         for personnage in members
         {
             print("Bonjour \(personnage.name)")
