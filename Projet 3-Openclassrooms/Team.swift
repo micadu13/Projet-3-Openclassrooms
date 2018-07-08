@@ -14,7 +14,7 @@ class Team
     var name:String = ""
     static var characters_name: [String] = []
     var members:[Character]=[]
-   
+    
     
     
     init()
@@ -61,16 +61,29 @@ class Team
                 {
                     case "1":
                     print("Vous avez choisi le Fighter")
+                    
                     print("Veuillez nommer votre personnage")
                     let fighter_name = readLine()
-                
+                   
                     if(checkuniquename(fighter_name!) == true)
                     {
-                        var fighter = Fighter(name: fighter_name!)
+                        let fighter = Fighter(name: fighter_name!)
                         members.append(fighter)
-                        print("Vous avez choisi de nommer votre personnage \(String(describing: fighter_name))")
+                        print("Vous avez choisi de nommer votre personnage \(fighter_name!)")
                         i += 1
                     }
+                    else
+                    {
+                        print("Merci de bien vouloir rééssayer")
+                        while(checkuniquename(fighter_name!) == true)
+                        {
+                            let fighter = Fighter(name: fighter_name!)
+                            members.append(fighter)
+                            print("Vous avez choisi de nommer votre personnage \(fighter_name!)")
+                            i += 1
+                        }
+                    }
+                    
                     
                     
                 case "2":
