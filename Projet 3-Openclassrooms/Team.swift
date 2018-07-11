@@ -25,6 +25,7 @@ class Team
       
     }
     
+
  
     
     func setTeamName()
@@ -46,11 +47,11 @@ class Team
     
     func chooseCharacter()
     {
-        var i = 0
-        while(i<3)
+        
+        while(members.count<3)
         {
             presentationCharacter()
-            i += 1
+         
         }
     }
     
@@ -68,38 +69,42 @@ class Team
                 {
                     case "1":
                     print("Vous avez choisi le Fighter")
-                    print("Veuillez nommer votre fighter")
-                    var fighter_name = readLine()
-                    if(checkuniquename(fighter_name!) == true)
-                    {
-                        Team.characters_name.append(fighter_name!)
-                        var fighter = Fighter(name:fighter_name!)
-                        members.append(fighter)
-                    }
-                    else
-                    {
-                        print("Le nom de chaque personnage doit être unique")
-                        print("Veuillez svp nommer votre fighter")
-                        if (checkuniquename(fighter_name!) == true)
-                        {
-                            Team.characters_name.append(fighter_name!)
-                            var fighter = Fighter(name:fighter_name!)
-                            members.append(fighter)
-                        }
-                    }
+                    print("Veuillez nommer votre Fighter")
+                    
+                    let fighter_name = unique_name()
+                    Team.characters_name.append(fighter_name)
+                    let fighter = Fighter(name:fighter_name)
+                    members.append(fighter)
+                    
                     case "2":
                     print("Vous avez choisi le Mage")
-                case "3":
-                print("Vous avez choisi le Giant")
-                case "4":
-                print("Vous avez choisi le Dwarf")
-                default:
-                print("Je ne comprends pas, veuillez rééssayer")
+                    print("Veuillez nommer votre Mage")
+                    let mage_name = unique_name()
+                    Team.characters_name.append(mage_name)
+                    let mage = Mage(name:mage_name)
+                    members.append(mage)
+                    
+                    case "3":
+                    print("Vous avez choisi le Giant")
+                    print("Veuillez nommer votre Giant")
+                    let giant_name = unique_name()
+                    Team.characters_name.append(giant_name)
+                    let giant = Giant(name:giant_name)
+                    members.append(giant)
+                    
+                    case "4":
+                    print("Vous avez choisi le Dwarf")
+                    print("Veuillez nommer votre Dwarf")
+                    let dwarf_name = unique_name()
+                    Team.characters_name.append(dwarf_name)
+                    let dwarf = Dwarf(name:dwarf_name)
+                    members.append(dwarf)
+                    default:
+                        print("Je ne comprends pas, veuillez rééssayer")
                 }
             }
         
-        
-            
+
             
         
         for personnage in members
@@ -122,5 +127,30 @@ class Team
         return true
     }
     
+    func unique_name()->String
+    {
+        let unique = false
+        repeat
+        {
+            if let name = readLine()
+            {
+                if (checkuniquename(name))
+                {
+                    return name
+                }
+                else
+                {
+                    print("Le nom doit être unique, veuillez renommer le personnage")
+                }
+            }
+            
+        } while !unique
+        
+       
+        }
+       
+       
+    }
     
-}
+    
+
