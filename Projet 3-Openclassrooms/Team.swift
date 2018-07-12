@@ -53,7 +53,13 @@ class Team
             presentationCharacter()
          
         }
+        
+        if(members.count == 3)
+        {
+            listOfCharacter()
+        }
     }
+    
     
     
     func presentationCharacter()
@@ -75,7 +81,7 @@ class Team
                     Team.characters_name.append(fighter_name)
                     let fighter = Fighter(name:fighter_name)
                     members.append(fighter)
-                    listOfCharacter()
+                    
                     
                     case "2":
                     print("Vous avez choisi le Mage")
@@ -84,7 +90,7 @@ class Team
                     Team.characters_name.append(mage_name)
                     let mage = Mage(name:mage_name)
                     members.append(mage)
-                    listOfCharacter()
+                    
                     
                     case "3":
                     print("Vous avez choisi le Giant")
@@ -93,7 +99,7 @@ class Team
                     Team.characters_name.append(giant_name)
                     let giant = Giant(name:giant_name)
                     members.append(giant)
-                    listOfCharacter()
+                    
                     
                     case "4":
                     print("Vous avez choisi le Dwarf")
@@ -102,7 +108,7 @@ class Team
                     Team.characters_name.append(dwarf_name)
                     let dwarf = Dwarf(name:dwarf_name)
                     members.append(dwarf)
-                    listOfCharacter()
+                   
                     default:
                         print("Je ne comprends pas, veuillez rééssayer")
                 }
@@ -120,9 +126,9 @@ class Team
     {
         for personnage in members
         {
-            print("Votre personnage s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
+            print("Votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
         }
-    
+        
     }
     
     

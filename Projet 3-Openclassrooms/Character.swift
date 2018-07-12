@@ -24,10 +24,11 @@ class Character
     var attaque:Int
     var resistance:Int
     var arme:String
+    var type: String
     
-    init(name:String,life:Int,attaque:Int,resistance:Int,arme:String)
+    init(name:String,type: String, life:Int,attaque:Int,resistance:Int,arme:String)
     {
-        self.name = name;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
+        self.name = name; self.type = type;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
     }
         
     func atk(cible:Character)
