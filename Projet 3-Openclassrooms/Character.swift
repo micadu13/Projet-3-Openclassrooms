@@ -31,9 +31,10 @@ class Character
         self.name = name; self.type = type;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
     }
         
-    func atk(cible:Character)
+    /*func atk(cible:Character)
     {
         cible.life -= self.attaque
-    }
-}
+    }*/
+ 
+ }
 

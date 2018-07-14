@@ -64,11 +64,11 @@ class Team
     
     func presentationCharacter()
     {
-            print("Veuillez choisir un personnage dans la liste suivante: "
+            print("Veuillez choisir un personnage dans la liste suivante. Vous devez en choisir 3 maximum: "
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
                 + "\n3: Un Giant"
-                + "\n4: Un Dwarf")
+                + "\n4: Un Dwarf.")
             if let choice = readLine()
             {
                 switch choice
@@ -167,9 +167,54 @@ class Team
         
        
         }
+    
+    //Le joueur 1 va choisir un premier personnage à jouer
+    //Le joueur 1 va selectionner le personnage cible à recevoir les dégats
+    //fonction à mettre en place soit le joueur choisit n'importe quel personnage, soit il choisit le mage pour guérir les autres personnages
+    //mettre en place une fonction pour que le mage puisse soigner un personnage et demander quel personnage doit être soigné
+    
+    func PlayingWithTheCharacters()
+    {
+        print("Quel personnage voulez-vous jouer ?")
+        let personnage1 = members[0]
+        let name_personnage1 = Team.characters_name[0]
+        let personnage2 = members[1]
+        let name_personnage2 = Team.characters_name[1]
+        let personnage3 = members[2]
+        let name_personnage3 = Team.characters_name[2]
+        
+        print("Pour rappel, vous avez le choix entre: "
+        + "\n1. \(personnage1) qui s'appelle \(name_personnage1)"
+        + "\n2. \(personnage2) qui s'appelle \(name_personnage2)"
+        + "\n3. \(personnage3) qui s'appelle \(name_personnage3)")
+        
+        if let choice = readLine()
+        {
+            switch choice
+            {
+            case "1":
+            print("Vous avez choisi \(name_personnage1)")
+                
+            case "2":
+            print("Vous avez choisi \(name_personnage2)")
+            
+            case "3":
+            print("Vous avez choisi \(name_personnage3)")
+             
+                
+            default:
+            print("Je ne comprends pas, veuillez rééssayer")
+        
+            }
+    
+    
        
        
+        }
+    
     }
+   //Création de la fonction d'attaque
     
     
+}
 

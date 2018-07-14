@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Projet 3-Openclassrooms/Character.swift"
-            timestampString = "553124965.1230249"
+            timestampString = "553194938.054471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -26,7 +26,7 @@
                   moduleName = "Projet 3-Openclassrooms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michaelaidan/Documents/OpenClassrooms%20Formation/Parcours%20DAiOS/Projets/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Character.swift"
-                  timestampString = "552857963.1554821"
+                  timestampString = "553194721.556613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -41,7 +41,7 @@
                   moduleName = "Projet 3-Openclassrooms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michaelaidan/Documents/OpenClassrooms%20Formation/Parcours%20DAiOS/Projets/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Character.swift"
-                  timestampString = "552857963.159387"
+                  timestampString = "553194721.560351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -49,6 +49,38 @@
                   offsetFromSymbolStart = "77">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet 3-Openclassrooms/Team.swift"
+            timestampString = "553194938.054557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "unique_name()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet 3-Openclassrooms/Team.swift"
+            timestampString = "553194938.055192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "presentationCharacter()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
