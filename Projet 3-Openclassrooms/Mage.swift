@@ -12,7 +12,7 @@ class Mage:Character
     init(name:String)
     {
         
-        super.init(name:name,type:"Mage",life: 80,attaque: -20,resistance: 5,arme:"Potion")
+        super.init(name:name,type:"Mage",life: 80,attaque: 20,resistance: 5,arme:"Potion")
         
     }
 }

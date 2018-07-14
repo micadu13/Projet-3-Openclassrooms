@@ -195,6 +195,7 @@ class Team
             case "1":
             print("Vous avez choisi \(name_personnage1)")
                 
+            //fonction d'attaque ou de soin
             case "2":
             print("Vous avez choisi \(name_personnage2)")
             
@@ -214,7 +215,11 @@ class Team
     
     }
    //Création de la fonction d'attaque
-    
-    
+    func atk_ou_soin(cible personnage:Character)// Un personnage attaque un autre ou un personnage soigne un autre 
+    {
+      
+    }
+     
+   
 }
 
