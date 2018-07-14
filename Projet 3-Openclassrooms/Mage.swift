@@ -9,10 +9,10 @@
 import Foundation
 class Mage:Character
 {
-    init(name:String)
+    init(name:String,soin:Int = 20)
     {
         
-        super.init(name:name,type:"Mage",life: 80,attaque: 20,resistance: 5,arme:"Potion")
+         super.init(name:name,type:"Mage",life: 80,attaque:0,resistance: 5,arme:"Potion")
         
     }
 }

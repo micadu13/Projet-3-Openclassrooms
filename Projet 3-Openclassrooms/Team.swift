@@ -16,7 +16,6 @@ class Team
     var members:[Character]=[]
     
     
-    
     init()
     {
         self.setTeamName()
@@ -215,8 +214,14 @@ class Team
     
     }
    //Création de la fonction d'attaque
-    func atk_ou_soin(cible personnage:Character)// Un personnage attaque un autre ou un personnage soigne un autre 
+    func atk_ou_soin(cible:Character)// Un personnage attaque un autre ou un personnage soigne un autre
     {
+        if(Character.self == Mage.self)
+        {
+            Mage.soin += Character.self.life //on demande au Mage de donner de la vie au personnage cible
+            
+            
+        }
       
     }
      
