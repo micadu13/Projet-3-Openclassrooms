@@ -21,7 +21,7 @@ class Team
         self.setTeamName()
         self.printName()
         self.chooseCharacter()
-      
+        self.PlayingWithTheCharacters()
     }
     
 
@@ -174,33 +174,27 @@ class Team
     
     func PlayingWithTheCharacters()
     {
-        print("Quel personnage voulez-vous jouer ?")
-        let personnage1 = members[0]
-        let name_personnage1 = Team.characters_name[0]
-        let personnage2 = members[1]
-        let name_personnage2 = Team.characters_name[1]
-        let personnage3 = members[2]
-        let name_personnage3 = Team.characters_name[2]
+       print("Choisissez un personnage à jouer"
         
-        print("Pour rappel, vous avez le choix entre: "
-        + "\n1. \(personnage1) qui s'appelle \(name_personnage1)"
-        + "\n2. \(personnage2) qui s'appelle \(name_personnage2)"
-        + "\n3. \(personnage3) qui s'appelle \(name_personnage3)")
-        
+        + "\n1.Tapez 1 pour le 1er personnage"
+        + "\n2.Tapez 2 pour le 2e personnage"
+        + "\n3.Tapez 3 pour le 3e personnage")
         if let choice = readLine()
         {
             switch choice
             {
             case "1":
-            print("Vous avez choisi \(name_personnage1)")
-                
+            let personnage1 = members[0]
+             print("Vous avez choisi le \(personnage1.type) qui s'appelle \(personnage1.name)")
             //fonction d'attaque ou de soin
             case "2":
-            print("Vous avez choisi \(name_personnage2)")
-            
+            let personnage2 = members[1]
+            print("Vous avez choisi le \(personnage2.type) qui s'appelle \(personnage2.name)")
+
             case "3":
-            print("Vous avez choisi \(name_personnage3)")
-             
+            let personnage3 = members[2]
+            print("Vous avez choisi le \(personnage3.type) qui s'appelle \(personnage3.name)")
+
                 
             default:
             print("Je ne comprends pas, veuillez rééssayer")
@@ -209,22 +203,22 @@ class Team
     
     
        
-       
         }
     
     }
-   //Création de la fonction d'attaque
+    
+   /*Création de la fonction d'attaque
     func atk_ou_soin(cible:Character)// Un personnage attaque un autre ou un personnage soigne un autre
     {
         if(Character.self == Mage.self)
         {
-            Mage.soin += Character.self.life //on demande au Mage de donner de la vie au personnage cible
-            
-            
+            Character(Mage).soin += Character.self.life //on demande au Mage de donner de la vie au personnage cible
+     }
+      */
         }
       
-    }
+
      
    
-}
+
 
