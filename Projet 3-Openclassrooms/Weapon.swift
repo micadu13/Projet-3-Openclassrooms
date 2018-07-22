@@ -9,4 +9,8 @@
 import Foundation
 class Weapon {
    //Le coffre au trésor des armes
+    init()
+    {
+        var atk:Int = 5
+    }
 }
