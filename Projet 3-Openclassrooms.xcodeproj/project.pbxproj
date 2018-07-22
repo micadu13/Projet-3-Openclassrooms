@@ -15,6 +15,9 @@
 		A2013B3320B2CAE100E3C161 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2C20B2CAE100E3C161 /* Game.swift */; };
 		A2013B3420B2CAE100E3C161 /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2D20B2CAE100E3C161 /* Mage.swift */; };
 		A2013B3520B2CAE100E3C161 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2013B2E20B2CAE100E3C161 /* Character.swift */; };
+		A274587E2105222F0036955F /* Fire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274587D2105222F0036955F /* Fire.swift */; };
+		A2745880210522590036955F /* Javelin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274587F210522590036955F /* Javelin.swift */; };
+		A2745882210522750036955F /* Kalachnikov.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2745881210522750036955F /* Kalachnikov.swift */; };
 		A2874ABB20BB15190056AADC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2874ABA20BB15190056AADC /* Weapon.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		A2013B2C20B2CAE100E3C161 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A2013B2D20B2CAE100E3C161 /* Mage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
 		A2013B2E20B2CAE100E3C161 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		A274587D2105222F0036955F /* Fire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fire.swift; sourceTree = "<group>"; };
+		A274587F210522590036955F /* Javelin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Javelin.swift; sourceTree = "<group>"; };
+		A2745881210522750036955F /* Kalachnikov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalachnikov.swift; sourceTree = "<group>"; };
 		A2874ABA20BB15190056AADC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +88,9 @@
 				A2013B2920B2CAE000E3C161 /* Team.swift */,
 				A2013B2120B2C9AE00E3C161 /* main.swift */,
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
+				A2745881210522750036955F /* Kalachnikov.swift */,
+				A274587F210522590036955F /* Javelin.swift */,
+				A274587D2105222F0036955F /* Fire.swift */,
 			);
 			path = "Projet 3-Openclassrooms";
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 				A2013B3020B2CAE100E3C161 /* Team.swift in Sources */,
 				A2013B3320B2CAE100E3C161 /* Game.swift in Sources */,
 				A2013B2220B2C9AE00E3C161 /* main.swift in Sources */,
+				A2745882210522750036955F /* Kalachnikov.swift in Sources */,
 				A2013B3120B2CAE100E3C161 /* Dwarf.swift in Sources */,
 				A2874ABB20BB15190056AADC /* Weapon.swift in Sources */,
+				A274587E2105222F0036955F /* Fire.swift in Sources */,
+				A2745880210522590036955F /* Javelin.swift in Sources */,
 				A2013B2F20B2CAE100E3C161 /* Fighter.swift in Sources */,
 				A2013B3220B2CAE100E3C161 /* Giant.swift in Sources */,
 				A2013B3420B2CAE100E3C161 /* Mage.swift in Sources */,

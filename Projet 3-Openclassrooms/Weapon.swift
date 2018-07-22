@@ -9,8 +9,12 @@
 import Foundation
 class Weapon {
    //Le coffre au trésor des armes
-    init()
+    
+    var name:String
+    var atk:Int
+    
+    init(name:String, atk:Int)
     {
-        var atk:Int = 5
+        self.name = name; self.atk = atk
     }
 }

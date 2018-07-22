@@ -11,7 +11,7 @@ class Game {
     
     var player1:Team
     var player2:Team
-    var weapons_chest:[String] = ["Feu","javelot","kalachnikov"]
+    var weapons_chest:[Weapon] = []
     
     
     init()
