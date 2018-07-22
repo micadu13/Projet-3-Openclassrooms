@@ -51,6 +51,7 @@ class Game {
             + "\n.2 \(player2.characters[1].name) , de type:  \(player2.characters[1].type) qui a \(player2.characters[1].life) points de vie et \(player2.characters[1].attaque) points d'attaque"
             + "\n.2 \(player2.characters[2].name) , de type:  \(player2.characters[2].type) qui a \(player2.characters[2].life) points de vie et \(player2.characters[2].attaque) points d'attaque")
         
+        
 }
     
    
@@ -188,22 +189,79 @@ class Game {
             print("Choisisez une arme dans le coffre")
             for armes in weapons_chest
             {
-                var arme1 = weapons_chest[0]
-                var arme2 = weapons_chest[1]
-                var arme3 = weapons_chest[2]
+                let arme1 = weapons_chest[0]
+                let arme2 = weapons_chest[1]
+                let arme3 = weapons_chest[2]
                 
-                print("Vous avez la possibilité de choisir une nouvelle arme quand vous voulez. Voici les armes que vous pouvez utiliser:" +
-                    "\n1. \(arme1)" +
-                    "\n2. \(arme2)" +
-                    "\n3. \(arme3)")
+                if let arme1 = arme1 as? Weapon
+                {
+                    weapons_chest.append(arme1)
+                }
+                if let arme2 = arme2 as? Weapon
+                {
+                    weapons_chest.append(arme2)
+                }
+                if let arme3 = arme3 as? Weapon
+                {
+                    weapons_chest.append(arme3)
+                }
+            }
+        }
+    }
+                
+         func changing_weapons()
+                {
+                    let arme1 = weapons_chest[0]
+                    let arme2 = weapons_chest[1]
+                    let arme3 = weapons_chest[2]
+                    
+                    print("Vous avez la possibilité de choisir une nouvelle arme quand vous voulez. Voici les armes que vous pouvez utiliser:" +
+                    "\n1. Le/La \(arme1.name) avec une attaque de \(arme1.atk)" +
+                    "\n2. Le/La \(arme2.name) avec une attaque de \(arme2.atk)" +
+                    "\n3. Le/La \(arme3.name) avec une attaque de \(arme3.atk) ")
+                
+                print("Souhaiteriez-vous changer les armes existantes ?:" +
+                    "\n1. Tapez O pour Oui" +
+                    "\n2. Tapez N pour Non")
+                
+                if let reponse = readLine()
+                {
+                    switch reponse
+                    {
+                        case "O":
+                        print("Quelle arme voudriez-vous changer ?"
+                        + "\n1. L'arme \(arme1.name) avec \(arme1.atk) d'attaque"
+                        + "\n2. L'arme \(arme2.name) avec \(arme2.atk) d'attaque"
+                        + "\n3. L'arme \(arme3.name) avec \(arme3.atk) d'attaque")
+                        
+                        if let arme = readLine()
+                        {
+                            switch arme
+                            {
+                                case "1":
+                                print("Vous avez choisi l'arme \(arme1.name)")
+                                print("Choisissez le nouveau nom de l'arme à remplacer à la place de l'arme \(arme1.name)")
+                                
+                                print("Quelle est l'attaque de la nouvelle arme ?")
+                                print("Parfait, nous prenons en considération, votre nouvelle arme s'appelle \(arme1.name) et aura \(arme1.atk) points d'attaque")
+                            case "2":
+                                print("Vous avez choisi l'arme \(arme2.name)")
+                                default:
+                                print("Je ne comprends pas désolé")
+                            }
+                        }
+                        case "N":
+                        print("OK, pas de problème, continuons le jeu")
+                        default:
+                        print("Je n'ai pas bien compris, pourriez-vous rééssayer svp? ")
+                    }
+                }
             }
             
             
         }
         
-    }
-        
-    }
+
   
     
 
