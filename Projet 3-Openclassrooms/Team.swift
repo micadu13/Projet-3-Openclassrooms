@@ -11,17 +11,17 @@ class Team
 {
    
     
-    var name:String = ""
+    var team_name:String = ""
     static var characters_name: [String] = []
-    var members:[Character]=[]
+    var characters:[Character]=[]
     
     
     init()
     {
         self.setTeamName()
-        self.printName()
-        self.chooseCharacter()
-        self.PlayingWithTheCharacters()
+        //self.printTeamName()
+        //self.chooseCharacter()
+       
     }
     
 
@@ -34,26 +34,28 @@ class Team
         {
             if entreeClavier != ""
             {
-                self.name = entreeClavier
+                self.team_name = entreeClavier
             }
         }
         
     }
-    func printName()
-    {
-        print("Le nom de votre équipe est \(self.name)")
-    }
     
+   /* func printTeamName()
+    {
+        
+        print("Le nom de votre équipe est \(self.team_name)")
+    }
+    */
     func chooseCharacter()
     {
         
-        while(members.count<3)
+        while(characters.count<3)
         {
             presentationCharacter()
          
         }
         
-        if(members.count == 3)
+        if(characters.count == 3)
         {
             listOfCharacter()
         }
@@ -63,7 +65,7 @@ class Team
     
     func presentationCharacter()
     {
-            print("Veuillez choisir un personnage dans la liste suivante. Vous devez en choisir 3 maximum: "
+            print("Veuillez choisir un personnage dans la liste suivante. Rapper, vous devez en choisir 3 maximum: "
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
                 + "\n3: Un Giant"
@@ -76,149 +78,141 @@ class Team
                     print("Vous avez choisi le Fighter")
                     print("Veuillez nommer votre Fighter")
                     
-                    let fighter_name = unique_name()
+                    let fighter_name = unique_name_character()
                     Team.characters_name.append(fighter_name)
                     let fighter = Fighter(name:fighter_name)
-                    members.append(fighter)
-                    
+                    characters.append(fighter)
+                    print("Votre fighter s'appelle \(fighter.name)")
                     
                     case "2":
                     print("Vous avez choisi le Mage")
                     print("Veuillez nommer votre Mage")
-                    let mage_name = unique_name()
+                    let mage_name = unique_name_character()
                     Team.characters_name.append(mage_name)
                     let mage = Mage(name:mage_name)
-                    members.append(mage)
-                    
+                    characters.append(mage)
+                    print("Votre mage s'appelle \(mage.name)")
                     
                     case "3":
                     print("Vous avez choisi le Giant")
                     print("Veuillez nommer votre Giant")
-                    let giant_name = unique_name()
+                    let giant_name = unique_name_character()
                     Team.characters_name.append(giant_name)
                     let giant = Giant(name:giant_name)
-                    members.append(giant)
-                    
+                    characters.append(giant)
+                    print("Votre giant s'appelle \(giant.name)")
                     
                     case "4":
                     print("Vous avez choisi le Dwarf")
                     print("Veuillez nommer votre Dwarf")
-                    let dwarf_name = unique_name()
+                    let dwarf_name = unique_name_character()
                     Team.characters_name.append(dwarf_name)
                     let dwarf = Dwarf(name:dwarf_name)
-                    members.append(dwarf)
-                   
+                    characters.append(dwarf)
+                    print("Votre dwarf s'appelle \(dwarf.name)")
+                    
                     default:
                         print("Je ne comprends pas, veuillez rééssayer")
                 }
             }
         
 
-        /*for personnage in members
-        {
-            print("Votre personnage s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
-        }
-        */
 }
    
     func listOfCharacter()
     {
-        for personnage in members
+        for personnage in characters
         {
-            print("Votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
+            print("Récapitulons, votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
         }
         
     }
+  
+
     
     
-    func checkuniquename(_ name:String)-> Bool
+    func checkuniquename_character(_ character_name:String)-> Bool
     {
         for character in Team.characters_name
         {
-            if(name == character)
+            if(character_name == character)
             {
                 print("Le nom existe deja")
                 return false
             }
         }
-        Team.characters_name.append(name)
+        Team.characters_name.append(character_name)
         return true
     }
     
-    func unique_name()->String
+    func unique_name_character()->String
     {
-        let unique = false
+        let unique_character = false
         repeat
         {
-            if let name = readLine()
+            if let character_name = readLine()
             {
-                if (checkuniquename(name))
+                if (checkuniquename_character(character_name))
                 {
-                    return name
+                    return character_name
                 }
                 else
                 {
-                    print("Le nom doit être unique, veuillez renommer le personnage")
+                    print("Le nom de votre pesonnage doit être unique, veuillez renommer le personnage")
                 }
             }
             
-        } while !unique
+        } while !unique_character
         
        
         }
     
-    //Le joueur 1 va choisir un premier personnage à jouer
-    //Le joueur 1 va selectionner le personnage cible à recevoir les dégats
-    //fonction à mettre en place soit le joueur choisit n'importe quel personnage, soit il choisit le mage pour guérir les autres personnages
-    //mettre en place une fonction pour que le mage puisse soigner un personnage et demander quel personnage doit être soigné
+  
     
-    func PlayingWithTheCharacters()
+    func PlayingWithTheCharacters()-> Character
     {
-       print("Choisissez un personnage à jouer"
-        
-        + "\n1.Tapez 1 pour le 1er personnage"
+    
+       print("1.Tapez 1 pour le 1er personnage"
         + "\n2.Tapez 2 pour le 2e personnage"
         + "\n3.Tapez 3 pour le 3e personnage")
+        let entryOk:Bool = false
+        repeat
+        {
+            
+        
         if let choice = readLine()
         {
             switch choice
             {
             case "1":
-            let personnage1 = members[0]
-             print("Vous avez choisi le \(personnage1.type) qui s'appelle \(personnage1.name)")
+            let personnage1 = characters[0]
+            print("Vous avez choisi le \(personnage1.type) qui s'appelle \(personnage1.name)")
+            return personnage1
+                
             //fonction d'attaque ou de soin
             case "2":
-            let personnage2 = members[1]
+            let personnage2 = characters[1]
             print("Vous avez choisi le \(personnage2.type) qui s'appelle \(personnage2.name)")
+            return personnage2
 
             case "3":
-            let personnage3 = members[2]
+            let personnage3 = characters[2]
             print("Vous avez choisi le \(personnage3.type) qui s'appelle \(personnage3.name)")
+            return personnage3
 
                 
             default:
             print("Je ne comprends pas, veuillez rééssayer")
         
             }
+            }
     
     
        
-        }
+        } while(!entryOk)
     
     }
     
-   /*Création de la fonction d'attaque
-    func atk_ou_soin(cible:Character)// Un personnage attaque un autre ou un personnage soigne un autre
-    {
-        if(Character.self == Mage.self)
-        {
-            Character(Mage).soin += Character.self.life //on demande au Mage de donner de la vie au personnage cible
-     }
-      */
-        }
-      
 
-     
-   
-
-
+  
+}

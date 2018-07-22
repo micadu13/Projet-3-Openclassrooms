@@ -25,16 +25,17 @@ class Character
     var resistance:Int
     var arme:String
     var type: String
+    var soin: Int
     
-    init(name:String,type: String, life:Int,attaque:Int,resistance:Int,arme:String)
+    init(name:String,type: String, life:Int,attaque:Int,resistance:Int,arme:String, soin:Int)
     {
-        self.name = name; self.type = type;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
+        self.name = name; self.type = type;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme; self.soin = soin
     }
         
-    /*func atk(cible:Character)
+    func atk(target:Character)
     {
-        cible.life -= self.attaque
-    }*/
+        target.life -= self.attaque
+    }
  
  }
 
