@@ -38,23 +38,10 @@ class Game {
         player2.chooseCharacter()
         // Récapitulation joueur 1 et joueur 2
         print("\n")
-        print("Récapitulons" +
-            "\n Joueur 1, votre équipe s'appelle \(player1.team_name) et vous avez les personnages suivants:"
-            + "\n.1 \(player1.characters[0].name), de type:  \(player1.characters[0].type) qui a \(player1.characters[0].life) points de vie et \(player1.characters[0].attaque) points d'attaque"
-            + "\n.2 \(player1.characters[1].name) , de type:  \(player1.characters[1].type) qui a \(player1.characters[1].life) points de vie et \(player1.characters[1].attaque) points d'attaque"
-            + "\n.2 \(player1.characters[2].name) , de type:  \(player1.characters[2].type) qui a \(player1.characters[2].life) points de vie et \(player1.characters[2].attaque) points d'attaque" +
-            "\n"
-            +
-        
-            "\n Joueur 2, votre équipe s'appelle \(player2.team_name) et vous avez les personnages suivants:"
-            + "\n.1 \(player2.characters[0].name), de type:  \(player2.characters[0].type) qui a \(player2.characters[0].life) points de vie et \(player2.characters[0].attaque) points d'attaque"
-            + "\n.2 \(player2.characters[1].name) , de type:  \(player2.characters[1].type) qui a \(player2.characters[1].life) points de vie et \(player2.characters[1].attaque) points d'attaque"
-            + "\n.2 \(player2.characters[2].name) , de type:  \(player2.characters[2].type) qui a \(player2.characters[2].life) points de vie et \(player2.characters[2].attaque) points d'attaque")
+       completeListOfCharacters()
         
         
 }
-    
-   
     
     
    /* func fight()
@@ -115,6 +102,7 @@ class Game {
                 "n2. \(player1.characters[1].name) de type \(player1.characters[1].type) de \(player1.characters[1].life) points de vie" +
                 "n3. \(player1.characters[2].name) de type \(player1.characters[2].type) de \(player1.characters[2].life) points de vie" +
                 "se sont bien battus !")
+            // penser à afficher chaque personnage s'il est toujours vivant ? 
             
         }
     
@@ -231,6 +219,18 @@ class Game {
                             case "1":
                             print("Vous avez choisi l'arme n°1 appellée \(arme1.name)")
                             print("A quel personnage souhaiteriez-vous associer cette arme ?")
+                            completeListOfCharacters()
+                            var character1 = player1.characters[0]
+                            print("Tapez le chiffre correspondant suivant le numéro de votre personnage associé:"
+                            + "\n1.Tapez 1 pour \(characters[0])")
+                            if let weapon1toassociate = readLine()
+                            {
+                                switch weapon1toassociate
+                                {
+                                    case
+                                }
+                            }
+                                
                             case "2":
                             print("Vous avez choisi l'arme n°2 appellée \(arme2.name)")
                             case "3":
