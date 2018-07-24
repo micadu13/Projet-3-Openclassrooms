@@ -215,12 +215,32 @@ class Game {
                     let arme2 = weapons_chest[1]
                     let arme3 = weapons_chest[2]
                     
-                    print("Vous avez la possibilité de choisir une nouvelle arme quand vous voulez. Voici les armes que vous pouvez utiliser:" +
+                    print("Vous avez la possibilité de choisir une nouvelle arme supplémentaire si vous voulez. Voici les armes que vous pouvez utiliser:" +
                     "\n1. Le/La \(arme1.name) avec une attaque de \(arme1.atk)" +
                     "\n2. Le/La \(arme2.name) avec une attaque de \(arme2.atk)" +
                     "\n3. Le/La \(arme3.name) avec une attaque de \(arme3.atk) ")
+                    
+                    print("Laquelle de ces armes voudiez-vous choisir ?"
+                    + "\n1. Le/La \(arme1.name)" +
+                    "\n2. Le/La \(arme2.name)" +
+                    "\n3. Le/La \(arme3.name)")
+                    if let weapontochoose = readLine()
+                    {
+                        switch weapontochoose
+                        {
+                            case "1":
+                            print("Vous avez choisi l'arme n°1 appellée \(arme1.name)")
+                            print("A quel personnage souhaiteriez-vous associer cette arme ?")
+                            case "2":
+                            print("Vous avez choisi l'arme n°2 appellée \(arme2.name)")
+                            case "3":
+                            print("Vous avez choisi l'arme n°3 appellée \(arme3.name)")
+                            default:
+                            print("Je ne comprends pas")
+                        }
+                    }
                 
-                print("Souhaiteriez-vous changer les armes existantes ?:" +
+                    print("Bonus: Souhaiteriez-vous ajouter  de nouvelles armes  ?:" +
                     "\n1. Tapez O pour Oui" +
                     "\n2. Tapez N pour Non")
                 
@@ -229,27 +249,8 @@ class Game {
                     switch reponse
                     {
                         case "O":
-                        print("Quelle arme voudriez-vous changer ?"
-                        + "\n1. L'arme \(arme1.name) avec \(arme1.atk) d'attaque"
-                        + "\n2. L'arme \(arme2.name) avec \(arme2.atk) d'attaque"
-                        + "\n3. L'arme \(arme3.name) avec \(arme3.atk) d'attaque")
+                        print("Vous avez souhaité ajouter de nouvelles armes")
                         
-                        if let arme = readLine()
-                        {
-                            switch arme
-                            {
-                                case "1":
-                                print("Vous avez choisi l'arme \(arme1.name)")
-                                print("Choisissez le nouveau nom de l'arme à remplacer à la place de l'arme \(arme1.name)")
-                                
-                                print("Quelle est l'attaque de la nouvelle arme ?")
-                                print("Parfait, nous prenons en considération, votre nouvelle arme s'appelle \(arme1.name) et aura \(arme1.atk) points d'attaque")
-                            case "2":
-                                print("Vous avez choisi l'arme \(arme2.name)")
-                                default:
-                                print("Je ne comprends pas désolé")
-                            }
-                        }
                         case "N":
                         print("OK, pas de problème, continuons le jeu")
                         default:
@@ -257,7 +258,27 @@ class Game {
                     }
                 }
             }
-            
+    
+    
+    func completeListOfCharacters()
+    {
+        print("Récapitulons, voici la liste des personnages par joueur:"
+            + "\n L'équipe de \(player1.team_name) est composée de"
+            + "\n"
+            + "\n1. \(player1.characters[0].name) de type \(player1.characters[0].type) avec: \(player1.characters[0].life) points de vie, une arme de type \(player1.characters[0].arme) et une attaque de puissance \(player1.characters[0].attaque)"
+            + "\n2. \(player1.characters[1].name) de type \(player1.characters[1].type) avec: \(player1.characters[1].life) points de vie, une arme de type \(player1.characters[1].arme) et une attaque de puissance \(player1.characters[1].attaque)"
+            + "\n3. \(player1.characters[2].name) de type \(player1.characters[2].type) avec: \(player1.characters[2].life) points de vie, une arme de type \(player1.characters[2].arme) et une attaque de puissance \(player1.characters[2].attaque)"
+            + "\n"
+            + "\n L'équipe de \(player2.team_name) est composée de"
+            + "\n"
+            + "\n1. \(player2.characters[0].name) de type \(player2.characters[0].type) avec: \(player2.characters[0].life) points de vie, une arme de type \(player2.characters[0].arme) et une attaque de puissance \(player2.characters[0].attaque)"
+            + "\n2. \(player2.characters[1].name) de type \(player2.characters[1].type) avec: \(player2.characters[1].life) points de vie, une arme de type \(player2.characters[1].arme) et une attaque de puissance \(player2.characters[1].attaque)"
+            + "\n3. \(player2.characters[2].name) de type \(player2.characters[2].type) avec: \(player2.characters[2].life) points de vie, une arme de type \(player2.characters[2].arme) et une attaque de puissance \(player2.characters[2].attaque)"
+            )
+    }
+    
+    
+    
             
         }
         

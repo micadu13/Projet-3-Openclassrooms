@@ -57,7 +57,7 @@ class Team
         
         if(characters.count == 3)
         {
-            listOfCharacter()
+            recapCharacter()
         }
     }
     
@@ -119,7 +119,7 @@ class Team
 
 }
    
-    func listOfCharacter()
+    func recapCharacter()
     {
         for personnage in characters
         {
@@ -212,6 +212,8 @@ class Team
         } while(!entryOk)
     
     }
+    
+    
     
 
   
