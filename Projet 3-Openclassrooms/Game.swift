@@ -43,58 +43,69 @@ class Game {
         
 }
     
+
     
-   /* func fight()
+  func atourderole(){
+    
+    let generalcase:Bool = player1.characters[0].life != 0 && player1.characters[1].life != 0 && player1.characters[2].life != 0 && player2.characters[0].life != 0 && player2.characters[1].life != 0 && player2.characters[2].life != 0
+    
+    let particularcaseteam1:Bool = player1.characters[0].life != 0 || player1.characters[1].life != 0 || player1.characters[2].life != 0
+    
+    let particularcaseteam2:Bool = player2.characters[0].life != 0 || player2.characters[1].life != 0 || player2.characters[2].life != 0
+    
+    let finalcaseteam1:Bool = player1.characters[0].life != 0 && player1.characters[1].life != 0 && player1.characters[2].life != 0
+    
+    let finalcaseteam2:Bool = player2.characters[0].life != 0 && player2.characters[1].life != 0 && player2.characters[2].life != 0
+    
+   var team1eliminated = player1.characters[0].life <= 0 && player1.characters[1].life <= 0 && player1.characters[2].life <= 0
+   
+    var team2eliminated = player2.characters[0].life <= 0 && player2.characters[1].life <= 0 && player2.characters[2].life <= 0
+    
+    while generalcase
     {
+        fight(attakingplayer:player1,defendingplayer:player2)
+        fight(attakingplayer:player2,defendingplayer:player1)
         
-        
-        
-        var actionCharacter = attakingplayer.PlayingWithTheCharacters()
-        if let mage = actionCharacter as? Mage
+    
+    
+        if(particularcaseteam1 && particularcaseteam2)
         {
-            var healedCharacter = attakingplayer.PlayingWithTheCharacters()
-            mage.heal(target: healedCharacter)
+            while(player1.characters[0].life <= 0)
+            {
+                print("Votre personnage \(player1.characters[0].name) a été supprimé parce qu'il est décédé.")
+                //Loop for fight
+                fight(attakingplayer: player1, defendingplayer: player2)
+                // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                
+            }
+        
         }
+        
+        else if()
+        {
+        
+        }
+        else if()
+        {
+        
+        }
+
+        
         else
         {
-            var targetCharacter = defendingplayer.PlayingWithTheCharacters()
-        actionCharacter.atk(target:targetCharacter)
-        print("Le personnage \(targetCharacter.name) a \(targetCharacter.life) points de vie")
-        }
         
- 
-    }*/
+        }
+    }
     
-    
-   func atourderole()
-   {
-    
-    let casgeneral:Bool = player1.characters[0].life != 0 && player1.characters[1].life != 0 && player1.characters[2].life != 0 && player2.characters[0].life != 0 && player2.characters[1].life != 0 && player2.characters[2].life != 0
-    
-    let caspartielteam1:Bool = player1.characters[0].life != 0 || player1.characters[1].life != 0 || player1.characters[2].life != 0
-    
-    let caspartielteam2:Bool = player2.characters[0].life != 0 || player2.characters[1].life != 0 || player2.characters[2].life != 0
-    
-    let casfinalteam1:Bool = player1.characters[0].life != 0 && player1.characters[1].life != 0 && player1.characters[2].life != 0
-    
-    let casfinalteam2:Bool = player2.characters[0].life != 0 && player2.characters[1].life != 0 && player2.characters[2].life != 0
-    
-    
-        while(casgeneral == true)
+        while(generalcase || particularcaseteam1 || particularcaseteam2 )
         {
-            fightprotocolfirstteam()
-            fightprotocolsecondteam()
+            fight(attakingplayer:player1,defendingplayer:player2)
+            fight(attakingplayer:player2,defendingplayer:player1)
             
         }
     
-        while (caspartielteam1 == true && caspartielteam2 == true)
-        {
-            fightprotocolfirstteam()
-            fightprotocolsecondteam()
-           
-        }
     
-        while(casfinalteam1 == true)
+        while(finalcaseteam1 == true)
         {
             print("Bravo \(player1.team_name) vous avez gagné cette partie." +
                 "\n Vos personnages: " +
@@ -102,11 +113,11 @@ class Game {
                 "n2. \(player1.characters[1].name) de type \(player1.characters[1].type) de \(player1.characters[1].life) points de vie" +
                 "n3. \(player1.characters[2].name) de type \(player1.characters[2].type) de \(player1.characters[2].life) points de vie" +
                 "se sont bien battus !")
-            // penser à afficher chaque personnage s'il est toujours vivant ? 
+            // penser à afficher chaque personnage s'il est toujours vivant ?
             
         }
     
-        while(casfinalteam2 == true)
+        while(finalcaseteam2 == true)
         {
             print("Bravo \(player2.team_name) vous avez gagné cette partie." +
                 "\n Vos personnages: " +
@@ -119,14 +130,13 @@ class Game {
     
     }
     
-    func fightprotocolfirstteam()
+    func fight(attakingplayer:Team,defendingplayer:Team)
     {
        
            print("\n")
-           print("\(player1.team_name), c'est à vous, attaquez ")
-            print("Choisissez un personnage qui va attquer ")
-        let attakingplayer = player1
-        let defendingplayer = player2
+           print("\(attakingplayer.team_name), c'est à vous, attaquez ")
+            print("Choisissez un personnage qui va attaquer ")
+       
             
         let actionCharacter = attakingplayer.PlayingWithTheCharacters()
         
@@ -134,36 +144,18 @@ class Game {
             {
                 let healedCharacter = attakingplayer.PlayingWithTheCharacters()
                 mage.heal(target: healedCharacter)
+                print("Le personnage \(healedCharacter.name) de l'équipe  de \(defendingplayer.team_name) a été soigné par \(mage.name) de l'équipe \(attakingplayer.team_name) et a \(healedCharacter.life) points de vie")
             }
             else
             {
                 print("Choisisez le personnage que vous allez cibler")
                 let targetCharacter = defendingplayer.PlayingWithTheCharacters()
                 actionCharacter.atk(target:targetCharacter)
-                print("Le personnage \(targetCharacter.name) de l'équipe  de \(player2.team_name) a été attaqué par \(actionCharacter.name) de l'équipe \(player1.team_name) et a \(targetCharacter.life) points de vie")
+                print("Le personnage \(targetCharacter.name) de l'équipe  de \(defendingplayer.team_name) a été attaqué par \(actionCharacter.name) de l'équipe \(attakingplayer.team_name) et a \(targetCharacter.life) points de vie")
             }
     }
+
     
-    func fightprotocolsecondteam()
-    {
-        print("\n")
-            print("\(player2.team_name), c'est à vous, attaquez ")
-        let attakingplayer = player2
-        let defendingplayer = player1
-            
-        let actionCharacter = attakingplayer.PlayingWithTheCharacters()
-            if let mage = actionCharacter as? Mage
-            {
-                let healedCharacter = attakingplayer.PlayingWithTheCharacters()
-                mage.heal(target: healedCharacter)
-            }
-            else
-            {
-                let targetCharacter = defendingplayer.PlayingWithTheCharacters()
-                actionCharacter.atk(target:targetCharacter)
-                print("Le personnage \(targetCharacter.name)  de l'équipe de \(player1.team_name) a été attaqué par \(actionCharacter.name)  de l'équipe de \(player2.team_name)et a \(targetCharacter.life) points de vie")
-            }
-        }
     
     
     func chest()
@@ -199,6 +191,7 @@ class Game {
                 
          func changing_weapons()
                 {
+                    //1st part : choice of a new weapon
                     let arme1 = weapons_chest[0]
                     let arme2 = weapons_chest[1]
                     let arme3 = weapons_chest[2]
@@ -216,21 +209,10 @@ class Game {
                     {
                         switch weapontochoose
                         {
+                            //Associating a new weapon to a precise character
                             case "1":
                             print("Vous avez choisi l'arme n°1 appellée \(arme1.name)")
-                            print("A quel personnage souhaiteriez-vous associer cette arme ?")
-                            completeListOfCharacters()
-                            var character1 = player1.characters[0]
-                            print("Tapez le chiffre correspondant suivant le numéro de votre personnage associé:"
-                            + "\n1.Tapez 1 pour \(characters[0])")
-                            if let weapon1toassociate = readLine()
-                            {
-                                switch weapon1toassociate
-                                {
-                                    case
-                                }
-                            }
-                                
+                            
                             case "2":
                             print("Vous avez choisi l'arme n°2 appellée \(arme2.name)")
                             case "3":
@@ -239,13 +221,19 @@ class Game {
                             print("Je ne comprends pas")
                         }
                     }
-                
-                    print("Bonus: Souhaiteriez-vous ajouter  de nouvelles armes  ?:" +
-                    "\n1. Tapez O pour Oui" +
-                    "\n2. Tapez N pour Non")
-                
+                }
+    
+    
+         func addNewweapon()
+         {
                 if let reponse = readLine()
                 {
+                    //2d part: Choice to add a new weapon
+                    print("Bonus: Souhaiteriez-vous ajouter  de nouvelles armes  ?:" +
+                        "\n1. Tapez O pour Oui" +
+                        "\n2. Tapez N pour Non")
+                    
+                    
                     switch reponse
                     {
                         case "O":
@@ -258,6 +246,7 @@ class Game {
                     }
                 }
             }
+            
     
     
     func completeListOfCharacters()

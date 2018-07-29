@@ -171,10 +171,127 @@ class Team
     
     func PlayingWithTheCharacters()-> Character
     {
-    
-       print("1.Tapez 1 pour le 1er personnage"
-        + "\n2.Tapez 2 pour le 2e personnage"
-        + "\n3.Tapez 3 pour le 3e personnage")
+        if(characters[0].life <= 0)
+        {
+            print("Rappel \(characters[0].name) n'a plus de vie et ne peut pas être utilisé")
+            print("2.Tapez 2 pour:\(characters[1].name) "
+                + "\n3.Tapez 3 pour: \(characters[2].name)")
+            let entryOk:Bool = false
+            repeat
+            {
+                
+                
+                if let choice = readLine()
+                {
+                    switch choice
+                    {
+                    
+                    case "2":
+                        let personnage2 = characters[1]
+                        print("Vous avez choisi le \(personnage2.type) qui s'appelle \(personnage2.name)")
+                        return personnage2
+                        
+                    case "3":
+                        let personnage3 = characters[2]
+                        print("Vous avez choisi le \(personnage3.type) qui s'appelle \(personnage3.name)")
+                        return personnage3
+                        
+                        
+                    default:
+                        print("Je ne comprends pas, veuillez rééssayer")
+                        
+                    }
+                }
+                
+                
+                
+            } while(!entryOk)
+
+            
+            
+        }
+        
+        else if(characters[1].life <= 0)
+        {
+            print("Rappel: \(characters[1]) n'a plus de vie et ne peut pas être utilisé")
+            print("1.Tapez 1 pour: \(characters[0].name)"
+                + "\n3.Tapez 3 pour: \(characters[2].name)")
+            
+            let entryOk:Bool = false
+            repeat
+            {
+                
+                
+                if let choice = readLine()
+                {
+                    switch choice
+                    {
+                    case "1":
+                        let personnage1 = characters[0]
+                        print("Vous avez choisi le \(personnage1.type) qui s'appelle \(personnage1.name)")
+                        return personnage1
+                        
+                        
+                    case "3":
+                        let personnage3 = characters[2]
+                        print("Vous avez choisi le \(personnage3.type) qui s'appelle \(personnage3.name)")
+                        return personnage3
+                        
+                        
+                    default:
+                        print("Je ne comprends pas, veuillez rééssayer")
+                        
+                    }
+                }
+                
+                
+                
+            } while(!entryOk)
+            
+            
+        }
+        
+        else if(characters[2].life <= 0)
+        {
+            print("1.Tapez 1 pour: \(characters[0].name)"
+                + "\n2.Tapez 2 pour:\(characters[1].name) ")
+             let entryOk:Bool = false
+            repeat
+            {
+                
+                
+                if let choice = readLine()
+                {
+                    switch choice
+                    {
+                    case "1":
+                        let personnage1 = characters[0]
+                        print("Vous avez choisi le \(personnage1.type) qui s'appelle \(personnage1.name)")
+                        return personnage1
+                        
+                    case "2":
+                        let personnage2 = characters[1]
+                        print("Vous avez choisi le \(personnage2.type) qui s'appelle \(personnage2.name)")
+                        return personnage2
+                
+                    default:
+                        print("Je ne comprends pas, veuillez rééssayer")
+                        
+                    }
+                }
+                
+                
+                
+            } while(!entryOk)
+            
+        }
+        
+        else
+        {
+        print("1.Tapez 1 pour: \(characters[0].name)"
+            + "\n2.Tapez 2 pour:\(characters[1].name) "
+            + "\n3.Tapez 3 pour: \(characters[2].name)")
+            
         let entryOk:Bool = false
         repeat
         {
@@ -205,7 +322,7 @@ class Team
             print("Je ne comprends pas, veuillez rééssayer")
         
             }
-            }
+        }
     
     
        
@@ -217,4 +334,5 @@ class Team
     
 
   
+}
 }
