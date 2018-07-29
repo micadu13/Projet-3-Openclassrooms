@@ -213,64 +213,50 @@ class Game {
         
         if(weapons_random == weapons_value)
         {
-            print("Choisisez une arme dans le coffre")
-            for armes in weapons_chest
+            print("Un coffre magique vient de s'ouvrir, vous avez la possibilité de changer d'arme et d'en utiliser une autre ou de continuer le jeu sans utiliser une nouvelle arme")
+            
+            for _ in weapons_chest
             {
-                let arme1 = weapons_chest[0]
-                let arme2 = weapons_chest[1]
-                let arme3 = weapons_chest[2]
-                
-                if let arme1 = arme1 as? Weapon
+                let weapon1 = weapons_chest[0]
+                weapons_chest.append(weapon1)
+                let weapon2 = weapons_chest[1]
+                weapons_chest.append(weapon2)
+                let weapon3 = weapons_chest[2]
+                weapons_chest.append(weapon3)
+            
+                print("Choisisez une arme dans le coffre." +
+                    "\n. Tapez 1 pour \(weapon1.name)" +
+                    "\n. Tapez 2 pour \(weapon2.name)" +
+                    "\n. Tapez 3 pour \(weapon3.name)" +
+                    "\n. Tapez 4 si vous désirez continuer le jeu sans changer d'armes")
+                if let weaponchoice = readLine()
                 {
-                    weapons_chest.append(arme1)
-                }
-                if let arme2 = arme2 as? Weapon
-                {
-                    weapons_chest.append(arme2)
-                }
-                if let arme3 = arme3 as? Weapon
-                {
-                    weapons_chest.append(arme3)
-                }
-            }
-        }
-    }
-                
-         func changing_weapons()
-                {
-                    //1st part : choice of a new weapon
-                    let arme1 = weapons_chest[0]
-                    let arme2 = weapons_chest[1]
-                    let arme3 = weapons_chest[2]
+                    switch weaponchoice
                     
-                    print("Vous avez la possibilité de choisir une nouvelle arme supplémentaire si vous voulez. Voici les armes que vous pouvez utiliser:" +
-                    "\n1. Le/La \(arme1.name) avec une attaque de \(arme1.atk)" +
-                    "\n2. Le/La \(arme2.name) avec une attaque de \(arme2.atk)" +
-                    "\n3. Le/La \(arme3.name) avec une attaque de \(arme3.atk) ")
-                    
-                    print("Laquelle de ces armes voudiez-vous choisir ?"
-                    + "\n1. Le/La \(arme1.name)" +
-                    "\n2. Le/La \(arme2.name)" +
-                    "\n3. Le/La \(arme3.name)")
-                    if let weapontochoose = readLine()
                     {
-                        switch weapontochoose
-                        {
-                            //Associating a new weapon to a precise character
-                            case "1":
-                            print("Vous avez choisi l'arme n°1 appellée \(arme1.name)")
-                            
-                            case "2":
-                            print("Vous avez choisi l'arme n°2 appellée \(arme2.name)")
-                            case "3":
-                            print("Vous avez choisi l'arme n°3 appellée \(arme3.name)")
-                            default:
-                            print("Je ne comprends pas")
-                        }
+                        case "1":
+                            print("Vous venez de choisir le type d'arme suivant: \(weapon1.name)")
+                            print("A quel personnage souhaitez-vous associer cette arme ?")
+                        
+                        case "2":
+                        
+                        case "3":
+                        
+                        case "4":
+                        atourderole()
+                        default:
+                        print("Je n'ai pas compris, merci de rééssayer")
                     }
                 }
-    
-
+                
+                
+                
+                
+            }
+            
+            
+        }
+                
     
     func completeListOfCharacters()
     {
@@ -299,4 +285,6 @@ class Game {
     
 
 
+
+}
 
