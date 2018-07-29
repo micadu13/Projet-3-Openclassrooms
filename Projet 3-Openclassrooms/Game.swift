@@ -53,10 +53,6 @@ class Game {
     
     let particularcaseteam2:Bool = player2.characters[0].life != 0 || player2.characters[1].life != 0 || player2.characters[2].life != 0
     
-    let finalcaseteam1:Bool = player1.characters[0].life != 0 && player1.characters[1].life != 0 && player1.characters[2].life != 0
-    
-    let finalcaseteam2:Bool = player2.characters[0].life != 0 && player2.characters[1].life != 0 && player2.characters[2].life != 0
-    
    var team1eliminated = player1.characters[0].life <= 0 && player1.characters[1].life <= 0 && player1.characters[2].life <= 0
    
     var team2eliminated = player2.characters[0].life <= 0 && player2.characters[1].life <= 0 && player2.characters[2].life <= 0
@@ -72,40 +68,90 @@ class Game {
         {
             while(player1.characters[0].life <= 0)
             {
-                print("Votre personnage \(player1.characters[0].name) a été supprimé parce qu'il est décédé.")
+                print(" Rappel \(player1.team_name), votre personnage \(player1.characters[0].name) a été supprimé parce qu'il est décédé.")
                 //Loop for fight
-                fight(attakingplayer: player1, defendingplayer: player2)
-                // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                
+                while(player1.characters[0].life <= 0)
+                {
+                    fight(attakingplayer: player1, defendingplayer: player2)
+                    fight(attakingplayer:player2,defendingplayer:player1)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
+            }
+            
+            while(player1.characters[1].life <= 0)
+            {
+                print(" Rappel \(player1.team_name), votre personnage \(player1.characters[1].name) a été supprimé parce qu'il est décédé.")
+                //Loop for fight
+                while(player1.characters[1].life <= 0)
+                {
+                    fight(attakingplayer: player1, defendingplayer: player2)
+                    fight(attakingplayer:player2,defendingplayer:player1)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
+            }
+            
+            while(player1.characters[2].life <= 0)
+            {
+                print(" Rappel \(player1.team_name), votre personnage \(player1.characters[2].name) a été supprimé parce qu'il est décédé.")
+                
+                //Loop for fight
+                while(player1.characters[2].life <= 0)
+                {
+                    fight(attakingplayer: player1, defendingplayer: player2)
+                    fight(attakingplayer:player2,defendingplayer:player1)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
+                
+            }
+            
+            while(player2.characters[0].life <= 0)
+            {
+                print(" Rappel \(player2.team_name), votre personnage \(player2.characters[0].name) a été supprimé parce qu'il est décédé.")
+                //Loop for fight
+                while(player2.characters[0].life <= 0)
+                {
+                    fight(attakingplayer: player2, defendingplayer: player1)
+                    fight(attakingplayer:player1,defendingplayer:player2)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
+                
+            }
+            
+            while(player2.characters[1].life <= 0)
+            {
+                print(" Rappel \(player2.team_name), votre personnage \(player2.characters[1].name) a été supprimé parce qu'il est décédé.")
+                //Loop for fight
+                while(player2.characters[1].life <= 0)
+                {
+                    fight(attakingplayer: player2, defendingplayer: player1)
+                    fight(attakingplayer:player1,defendingplayer:player2)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
+                
+            }
+            
+            while(player2.characters[2].life <= 0)
+            {
+                print(" Rappel \(player2.team_name), votre personnage \(player2.characters[2].name) a été supprimé parce qu'il est décédé.")
+                //Loop for fight
+                while(player2.characters[2].life <= 0)
+                {
+                    fight(attakingplayer: player2, defendingplayer: player1)
+                    fight(attakingplayer:player1,defendingplayer:player2)
+                    // Adapt the PlayingWithTheCharacters, maybe a new fonction with the condition
+                }
                 
             }
         
         }
-        
-        else if()
-        {
-        
-        }
-        else if()
-        {
-        
-        }
-
-        
-        else
-        {
-        
-        }
+    
     }
     
-        while(generalcase || particularcaseteam1 || particularcaseteam2 )
-        {
-            fight(attakingplayer:player1,defendingplayer:player2)
-            fight(attakingplayer:player2,defendingplayer:player1)
-            
-        }
     
     
-        while(finalcaseteam1 == true)
+    
+        if team2eliminated
         {
             print("Bravo \(player1.team_name) vous avez gagné cette partie." +
                 "\n Vos personnages: " +
@@ -117,7 +163,7 @@ class Game {
             
         }
     
-        while(finalcaseteam2 == true)
+        if team1eliminated
         {
             print("Bravo \(player2.team_name) vous avez gagné cette partie." +
                 "\n Vos personnages: " +
@@ -129,6 +175,7 @@ class Game {
     
     
     }
+    
     
     func fight(attakingplayer:Team,defendingplayer:Team)
     {
@@ -223,31 +270,7 @@ class Game {
                     }
                 }
     
-    
-         func addNewweapon()
-         {
-                if let reponse = readLine()
-                {
-                    //2d part: Choice to add a new weapon
-                    print("Bonus: Souhaiteriez-vous ajouter  de nouvelles armes  ?:" +
-                        "\n1. Tapez O pour Oui" +
-                        "\n2. Tapez N pour Non")
-                    
-                    
-                    switch reponse
-                    {
-                        case "O":
-                        print("Vous avez souhaité ajouter de nouvelles armes")
-                        
-                        case "N":
-                        print("OK, pas de problème, continuons le jeu")
-                        default:
-                        print("Je n'ai pas bien compris, pourriez-vous rééssayer svp? ")
-                    }
-                }
-            }
-            
-    
+
     
     func completeListOfCharacters()
     {
