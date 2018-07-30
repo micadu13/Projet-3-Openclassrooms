@@ -382,15 +382,15 @@ class Game {
         print("Récapitulons, voici la liste des personnages par joueur:"
             + "\n L'équipe de \(player1.team_name) est composée de"
             + "\n"
-            + "\n1. \(player1.characters[0].name) de type \(player1.characters[0].type) avec: \(player1.characters[0].life) points de vie, une arme de type \(player1.characters[0].arme) et une attaque de puissance \(player1.characters[0].attaque)"
-            + "\n2. \(player1.characters[1].name) de type \(player1.characters[1].type) avec: \(player1.characters[1].life) points de vie, une arme de type \(player1.characters[1].arme) et une attaque de puissance \(player1.characters[1].attaque)"
-            + "\n3. \(player1.characters[2].name) de type \(player1.characters[2].type) avec: \(player1.characters[2].life) points de vie, une arme de type \(player1.characters[2].arme) et une attaque de puissance \(player1.characters[2].attaque)"
+            + "\n1. \(player1.characters[0].name) de type \(player1.characters[0].type) avec: \(player1.characters[0].life) points de vie, une arme de type \(player1.characters[0].weapon) et une attaque de puissance \(player1.characters[0].attack)"
+            + "\n2. \(player1.characters[1].name) de type \(player1.characters[1].type) avec: \(player1.characters[1].life) points de vie, une arme de type \(player1.characters[1].weapon) et une attaque de puissance \(player1.characters[1].attack)"
+            + "\n3. \(player1.characters[2].name) de type \(player1.characters[2].type) avec: \(player1.characters[2].life) points de vie, une arme de type \(player1.characters[2].weapon) et une attaque de puissance \(player1.characters[2].attack)"
             + "\n"
             + "\n L'équipe de \(player2.team_name) est composée de"
             + "\n"
-            + "\n1. \(player2.characters[0].name) de type \(player2.characters[0].type) avec: \(player2.characters[0].life) points de vie, une arme de type \(player2.characters[0].arme) et une attaque de puissance \(player2.characters[0].attaque)"
-            + "\n2. \(player2.characters[1].name) de type \(player2.characters[1].type) avec: \(player2.characters[1].life) points de vie, une arme de type \(player2.characters[1].arme) et une attaque de puissance \(player2.characters[1].attaque)"
-            + "\n3. \(player2.characters[2].name) de type \(player2.characters[2].type) avec: \(player2.characters[2].life) points de vie, une arme de type \(player2.characters[2].arme) et une attaque de puissance \(player2.characters[2].attaque)"
+            + "\n1. \(player2.characters[0].name) de type \(player2.characters[0].type) avec: \(player2.characters[0].life) points de vie, une arme de type \(player2.characters[0].weapon) et une attaque de puissance \(player2.characters[0].attack)"
+            + "\n2. \(player2.characters[1].name) de type \(player2.characters[1].type) avec: \(player2.characters[1].life) points de vie, une arme de type \(player2.characters[1].weapon) et une attaque de puissance \(player2.characters[1].attack)"
+            + "\n3. \(player2.characters[2].name) de type \(player2.characters[2].type) avec: \(player2.characters[2].life) points de vie, une arme de type \(player2.characters[2].weapon) et une attaque de puissance \(player2.characters[2].attack)"
             )
     }
     

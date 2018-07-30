@@ -21,22 +21,22 @@ class Character
     }
     var name:String
     var life:Int
-    var attaque:Int
+    var attack:Int
     var resistance:Int
-    var arme:String
+    var weapon:String
     var type: String
-    var soin: Int
+    var treatment: Int
     
-    init(name:String,type: String, life:Int,attaque:Int,resistance:Int,arme:String, soin:Int)
+    init(name:String,type: String, life:Int,attack:Int,resistance:Int,weapon:String, treatment:Int)
     {
-        self.name = name; self.type = type;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme; self.soin = soin
+        self.name = name; self.type = type;self.life = life;self.attack = attack; self.resistance = resistance; self.weapon = weapon; self.treatment = treatment
     }
         
     func atk(target:Character)
     {
         if life>0
         {
-            target.life -= self.attaque
+            target.life -= self.attack
         }
         
     }

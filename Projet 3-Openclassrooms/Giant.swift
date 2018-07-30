@@ -11,6 +11,6 @@ class Giant:Character
 {
     init(name:String)
     {
-        super.init(name:name,type: "Giant",life: 200,attaque: 5,resistance: 50,arme:"Poings",soin: 0)
+        super.init(name:name,type: "Giant",life: 200,attack: 5,resistance: 50,weapon:"Poings",treatment: 0)
     }
 }
