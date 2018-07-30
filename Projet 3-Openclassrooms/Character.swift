@@ -39,10 +39,6 @@ class Character
             target.life -= self.attaque
         }
         
-        else
-        {
-                print("\(self.name) est mort, et ne peut plus attaquer. Vous avez perdu un tour!")
-        }
     }
  
  }
