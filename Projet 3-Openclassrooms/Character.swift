@@ -49,7 +49,10 @@ class Character
         
     }
     
-    func PlayingwithTheWeapons()
+    
+    
+    
+   func PlayingwithTheWeapons()
     {
         let weapon1 = weapons_chest[0]
         let weapon2 = weapons_chest[1]

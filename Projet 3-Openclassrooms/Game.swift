@@ -125,12 +125,12 @@ class Game {
         if(random())
         {
             //We have to choose the character to associate the weapon
-            var charactertoassociate = associatedcharacter.PlayingWithTheCharacters()
+            let charactertoassociate = associatedcharacter.PlayingWithTheCharacters()
             //The weapon choosen becomes the weapon of the character
-            var weapontoassociate = associatedweapon.PlayingwithTheWeapons()
+            let weapontoassociate = associatedweapon.PlayingwithTheWeapons()
             //Associate the new weapon to the character
             print("Vous avez choisi d'associer le/ la \(weapontoassociate) au personnage: \(charactertoassociate)")
-            var new_weapon = charactertoassociate(Weapon:weapontoassociate)
+            
         }
         else
         {

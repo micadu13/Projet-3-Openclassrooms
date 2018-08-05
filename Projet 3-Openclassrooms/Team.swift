@@ -69,7 +69,7 @@ class Team
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
                 + "\n3: Un Giant"
-                + "\n4: Un Dwarf.")
+                + "\n4: Un Dwarf")
             if let choice = readLine()
             {
                 switch choice
@@ -183,24 +183,24 @@ class Team
                 
                 if let choice = readLine()
                 {
-                    var personnage:Character?
+                    var character:Character?
                     
                     switch choice
                     {
                     case "1":
-                         personnage = characters[0]
+                         character = characters[0]
                      
                     case "2":
-                         personnage = characters[1]
+                         character = characters[1]
                     
                     case "3":
-                         personnage = characters[2]
+                         character = characters[2]
                       
                     default:
                         print("Je ne comprends pas, veuillez rééssayer")
                         
                     }
-                    if let selectedcharacter = personnage
+                    if let selectedcharacter = character
                     {
                         print("Vous avez choisi le \(selectedcharacter.type) qui s'appelle \(selectedcharacter.name) )")
                         if(selectedcharacter.life > 0)
