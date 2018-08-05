@@ -17,4 +17,9 @@ class Weapon {
     {
         self.name = name; self.atk = atk
     }
+    
+    func newweapon(target:Character)
+    {
+        var newweapon = Character.init(weapon:)
+    }
 }

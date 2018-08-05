@@ -11,7 +11,7 @@ class Game {
     
     var player1:Team
     var player2:Team
-    var weapons_chest:[Weapon] = []
+    
     
     
     init()
@@ -38,8 +38,7 @@ class Game {
         player2.chooseCharacter()
         // Récapitulation joueur 1 et joueur 2
         print("\n")
-       completeListOfCharacters()
-        
+        completeListOfCharacters()
         
 }
     
@@ -55,7 +54,8 @@ class Game {
         }
     }
     
-  func atourderole(){
+  func atourderole()
+  {
     
  
     while !deadTeam(player1) && !deadTeam(player2)
@@ -73,17 +73,22 @@ class Game {
     }
     if(deadTeam(player1))
     {
-        print("Bravo \(player2.team_name) vous avez gagné")
+        print("Bravo \(player2.team_name) vous avez gagné. Votre équipe était donc composée de:" +
+            "\n1. \(player2.characters[0].name) de type:  \(player2.characters[0].type) avec \(player2.characters[0].life) points de vie, ainsi que,"
+            +
+            "\n2. \(player2.characters[1].name) de type:  \(player2.characters[1].type) avec \(player2.characters[1].life) points de vie, ainsi que "
+            + "\n3. \(player2.characters[2].name) de type:  \(player2.characters[2].type) avec \(player2.characters[2].life) points de vie.")
     }
     else
     {
-        print("Bravo \(player1.team_name) vous avez gagné")
+        print("Bravo \(player1.team_name) vous avez gagné. Votre équipe était donc composée de:" +
+            "\n1. \(player1.characters[0].name) de type:  \(player1.characters[0].type) avec \(player1.characters[0].life) points de vie, ainsi que,"
+            +
+            "\n2. \(player1.characters[1].name) de type:  \(player1.characters[1].type) avec \(player1.characters[1].life) points de vie, ainsi que "
+            + "\n3. \(player1.characters[2].name) de type:  \(player1.characters[2].type) avec \(player1.characters[2].life) points de vie.")
         
     }
-    
-    
-    
-    
+
     }
     
     
@@ -100,6 +105,7 @@ class Game {
             if let mage = actionCharacter as? Mage
             {
                  // Put the chest func
+               
                 let healedCharacter = attakingplayer.PlayingWithTheCharacters()
                 mage.heal(target: healedCharacter)
                 print("Le personnage \(healedCharacter.name) de l'équipe  de \(attakingplayer.team_name) a été soigné par \(mage.name) de l'équipe \(attakingplayer.team_name) et a \(healedCharacter.life) points de vie")
@@ -113,270 +119,43 @@ class Game {
                 print("Le personnage \(targetCharacter.name) de l'équipe  de \(defendingplayer.team_name) a été attaqué par \(actionCharacter.name) de l'équipe \(attakingplayer.team_name) et a \(targetCharacter.life) points de vie")
             }
     }
-
     
-    
-    
-    func chest()
+    func chest(associatedcharacter:Team,associatedweapon:Character)
     {
-        
-    }
-    
-  /*func choseCharactersForChest()-> Character
-  {
-    let character1_player1 = player1.characters[0]
-    let character2_player1 = player1.characters[1]
-    let character3_player1 = player1.characters[2]
-    
-    let character1_player2 = player2.characters[0]
-    let character2_player2 = player2.characters[1]
-    let character3_player2 = player2.characters[2]
-    
-    
-    
-    if(character1_player1.life > 0 && character2_player1.life > 0 && character3_player1.life > 0)
+        if(random())
         {
-            print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player1.name) de type \(character1_player1.type)"
-            + "\n2. Tapez 2 pour \(character2_player1.name) de type \(character2_player1.type)"
-            + "\n3. Tapez 3 pour \(character3_player1.name) de type \(character3_player1.type)")
-            
-            if let charactertochooseforchest = readLine()
-            {
-                switch charactertochooseforchest
-                {
-                    case "1":
-                    print("Vous venez de choisir \(character1_player1.name)")
-                    return character1_player1
-                    case "2":
-                    print("Vous venez de choisir \(character2_player1.name)")
-                    return character2_player1
-                    case "3":
-                    print("Vous venez de choisir \(character3_player1.name)")
-                    return character3_player1
-                    default:
-                    print("Je ne comprends pas")
-                }
-            }
-            
+            //We have to choose the character to associate the weapon
+            var charactertoassociate = associatedcharacter.PlayingWithTheCharacters()
+            //The weapon choosen becomes the weapon of the character
+            var weapontoassociate = associatedweapon.PlayingwithTheWeapons()
+            //Associate the new weapon to the character
+            print("Vous avez choisi d'associer le/ la \(weapontoassociate) au personnage: \(charactertoassociate)")
+            var new_weapon = charactertoassociate(Weapon:weapontoassociate)
         }
+        else
+        {
+            print("Je ne comprends pas")
+        }
+    }
     
-    else if (character1_player1.life > 0 && character2_player1.life > 0)
-    {
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player1.name) de type \(character1_player1.type)"
-            + "\n2. Tapez 2 pour \(character2_player1.name) de type \(character2_player1.type)")
-        
-        if let charactertochooseforchest = readLine()
-        {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character1_player1.name)")
-                return character1_player1
-            case "2":
-                print("Vous venez de choisir \(character2_player1.name)")
-                return character2_player1
-            default:
-                print("Je ne comprends pas")
-            }
-        }
-        
-        
-    }
-       
-    else if(character1_player1.life > 0 && character3_player1.life > 0)
-    {
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player1.name) de type \(character1_player1.type)"
-            + "\n2. Tapez 3 pour \(character3_player1.name) de type \(character3_player1.type)")
-        
-        if let charactertochooseforchest = readLine()
-        {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character1_player1.name)")
-                return character1_player1
-            case "3":
-                print("Vous venez de choisir \(character3_player1.name)")
-                return character3_player1
-            default:
-                print("Je ne comprends pas")
-            }
-        }
-        
-        
-    }
-        
-
-  else if(character2_player2.life > 0 && character3_player1.life > 0)
-    {
-        
-            print("Choisissez un personnage dans la liste suivante:"
-                + "\n1. Tapez 2 pour \(character2_player1.name) de type \(character2_player1.type)"
-                + "\n2. Tapez 3 pour \(character3_player1.name) de type \(character3_player1.type)")
-            
-            if let charactertochooseforchest = readLine()
-            {
-                switch charactertochooseforchest
-                {
-                case "2":
-                    print("Vous venez de choisir \(character2_player1.name)")
-                    return character2_player1
-                case "3":
-                    print("Vous venez de choisir \(character3_player1.name)")
-                    return character3_player1
-                default:
-                    print("Je ne comprends pas")
-                }
-            }
-            
-            
-        
-    }
    
-  else if(character1_player2.life > 0 && character2_player2.life > 0 && character3_player2.life > 0)
+    
+ func random()->Bool
     {
+        let chestvalue = arc4random()
+        var value:Int = 0
         
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player2.name) de type \(character1_player2.type)"
-            + "\n2. Tapez 2 pour \(character2_player2.name) de type \(character2_player2.type)"
-            + "\n3. Tapez 3 pour \(character3_player2.name) de type \(character3_player2.type)")
-        
-        if let charactertochooseforchest = readLine()
+        if(chestvalue == value)
         {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character1_player2.name)")
-                return character1_player2
-            case "2":
-                print("Vous venez de choisir \(character2_player2.name)")
-                return character2_player2
-            case "3":
-                print("Vous venez de choisir \(character3_player2.name)")
-                return character3_player2
-            default:
-                print("Je ne comprends pas")
-            }
+            return true
+        }
+        else
+        {
+            return false
         }
     }
-        
-  else if(character1_player2.life > 0 && character2_player2.life > 0)
-    {
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player2.name) de type \(character1_player2.type)"
-            + "\n2. Tapez 2 pour \(character2_player2.name) de type \(character2_player2.type)")
-        
-        if let charactertochooseforchest = readLine()
-        {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character1_player2.name)")
-                return character1_player2
-            case "2":
-                print("Vous venez de choisir \(character2_player2.name)")
-                return character2_player2
-            default:
-                print("Je ne comprends pas")
-            }
-        }
-        
-    }
-        
-    else if(character1_player2.life > 0 && character3_player2.life > 0)
-    {
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 1 pour \(character1_player2.name) de type \(character1_player2.type)"
-            + "\n3. Tapez 3 pour \(character3_player2.name) de type \(character3_player2.type)")
-        
-        if let charactertochooseforchest = readLine()
-        {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character1_player2.name)")
-                return character1_player2
-            case "2":
-                print("Vous venez de choisir \(character3_player2.name)")
-                return character3_player2
-            default:
-                print("Je ne comprends pas")
-            }
-        }
-        
-    }
- 
-    else if (character2_player2.life > 0 && character3_player2.life > 0)
-    {
-        print("Choisissez un personnage dans la liste suivante:"
-            + "\n1. Tapez 2 pour \(character2_player2.name) de type \(character2_player2.type)"
-            + "\n3. Tapez 3 pour \(character3_player2.name) de type \(character3_player2.type)")
-        
-        if let charactertochooseforchest = readLine()
-        {
-            switch charactertochooseforchest
-            {
-            case "1":
-                print("Vous venez de choisir \(character2_player2.name)")
-                return character2_player2
-            case "2":
-                print("Vous venez de choisir \(character3_player2.name)")
-                return character3_player2
-            default:
-                print("Je ne comprends pas")
-            }
-        }
-        
-    }
-        
-    else if (character1_player1.life > 0 && character2_player1.life < 0 && character3_player1.life < 0)
-    {
-        print("Vous ne pouvez choisir que \(character1_player1.name) de l'équipe \(player1.team_name). Tous les autres personnages sont morts")
-        return character1_player1
-    }
-    else if (character1_player1.life < 0 && character2_player1.life > 0 && character3_player1.life < 0)
-    {
-        print("Vous ne pouvez choisir que \(character2_player1.name) de l'équipe \(player1.team_name). Tous les autres personnages sont morts")
-        return character2_player1
-        
-    }
     
-    else if (character1_player1.life < 0 && character2_player1.life < 0 && character3_player1.life > 0)
-    {
-        print("Vous ne pouvez choisir que \(character3_player1.name) de l'équipe \(player1.team_name). Tous les autres personnages sont morts")
-        return character3_player1
-    }
-        
-    else if (character1_player2.life > 0 && character2_player2.life < 0 && character3_player2.life < 0)
-    {
-       print("Vous ne pouvez choisir que \(character1_player2.name) de l'équipe \(player2.team_name). Tous les autres personnages sont morts")
-            return character1_player2
-    }
-    
-    else if (character1_player2.life < 0 && character2_player2.life > 0 && character3_player2.life < 0)
-    {
-        print("Vous ne pouvez choisir que \(character2_player2.name) de l'équipe \(player2.team_name). Tous les autres personnages sont morts")
-        return character2_player2
-    }
-    
-   else if (character1_player2.life < 0 && character2_player2.life < 0 && character3_player2.life > 0)
-    {
-        print("Vous ne pouvez choisir que \(character3_player2.name) de l'équipe \(player2.team_name). Tous les autres personnages sont morts")
-        return character3_player2
-        
-    }
-    else
-    {
-     
-    }
-    
-    }*/
-    
-    
-    
+
     func completeListOfCharacters()
     {
         print("Récapitulons, voici la liste des personnages par joueur:"
@@ -407,3 +186,4 @@ class Game {
 
 
 }
+
