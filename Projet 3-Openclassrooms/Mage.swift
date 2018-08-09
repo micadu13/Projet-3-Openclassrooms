@@ -12,7 +12,7 @@ class Mage:Character
     init(name:String)
     {
         
-        super.init(name:name,type:"Mage",life: 80,attack:0,resistance: 5,weapon:"Potion",treatment:20)
+        super.init(name:name,type:"Mage",life:80,resistance:5,weapon:Weapon(name:"Potion",atk:0),treatment:20)
         
     }
     func heal(target:Character)

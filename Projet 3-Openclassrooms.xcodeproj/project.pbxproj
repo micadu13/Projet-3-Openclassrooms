@@ -19,6 +19,7 @@
 		A2745880210522590036955F /* Javelin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274587F210522590036955F /* Javelin.swift */; };
 		A2745882210522750036955F /* Kalachnikov.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2745881210522750036955F /* Kalachnikov.swift */; };
 		A2874ABB20BB15190056AADC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2874ABA20BB15190056AADC /* Weapon.swift */; };
+		A2FD8DC22118DB90000E5C69 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD8DC12118DB90000E5C69 /* Potion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		A274587F210522590036955F /* Javelin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Javelin.swift; sourceTree = "<group>"; };
 		A2745881210522750036955F /* Kalachnikov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalachnikov.swift; sourceTree = "<group>"; };
 		A2874ABA20BB15190056AADC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		A2FD8DC12118DB90000E5C69 /* Potion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				A2013B2920B2CAE000E3C161 /* Team.swift */,
 				A2013B2120B2C9AE00E3C161 /* main.swift */,
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
+				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
 				A2745881210522750036955F /* Kalachnikov.swift */,
 				A274587F210522590036955F /* Javelin.swift */,
 				A274587D2105222F0036955F /* Fire.swift */,
@@ -159,6 +162,7 @@
 				A2745882210522750036955F /* Kalachnikov.swift in Sources */,
 				A2013B3120B2CAE100E3C161 /* Dwarf.swift in Sources */,
 				A2874ABB20BB15190056AADC /* Weapon.swift in Sources */,
+				A2FD8DC22118DB90000E5C69 /* Potion.swift in Sources */,
 				A274587E2105222F0036955F /* Fire.swift in Sources */,
 				A2745880210522590036955F /* Javelin.swift in Sources */,
 				A2013B2F20B2CAE100E3C161 /* Fighter.swift in Sources */,
@@ -225,6 +229,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -274,6 +279,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

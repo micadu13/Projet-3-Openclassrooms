@@ -12,7 +12,7 @@ class Dwarf:Character
     init(name:String)
     {
         
-        super.init(name:name,type:"Dwarf",life: 60,attack: 40,resistance: 10,weapon:"Axe/Hache",treatment: 0)
+        super.init(name:name,type:"Dwarf",life: 60,resistance: 10,weapon:Weapon(name:"Axe",atk:50),treatment: 0)
         
     }
 }

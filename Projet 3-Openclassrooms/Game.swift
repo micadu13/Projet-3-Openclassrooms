@@ -11,7 +11,7 @@ class Game {
     
     var player1:Team
     var player2:Team
-    
+    var weapons_chest:[Weapon] = [Kalachnikov(),Javelin(),Fire()]
     
     
     init()
@@ -117,20 +117,19 @@ class Game {
                 let targetCharacter = defendingplayer.PlayingWithTheCharacters()
                 actionCharacter.atk(target:targetCharacter)
                 print("Le personnage \(targetCharacter.name) de l'équipe  de \(defendingplayer.team_name) a été attaqué par \(actionCharacter.name) de l'équipe \(attakingplayer.team_name) et a \(targetCharacter.life) points de vie")
+                targetCharacter.recovery()
             }
     }
     
-    func chest(associatedcharacter:Team,associatedweapon:Character)
+    func chest(character:Character)
     {
         if(random())
         {
-            //We have to choose the character to associate the weapon
-            let charactertoassociate = associatedcharacter.PlayingWithTheCharacters()
-            //The weapon choosen becomes the weapon of the character
-            let weapontoassociate = associatedweapon.PlayingwithTheWeapons()
-            //Associate the new weapon to the character
-            print("Vous avez choisi d'associer le/ la \(weapontoassociate) au personnage: \(charactertoassociate)")
-            
+           
+            //on selectionne aléatoirement une arme dans le coffre
+            //on demande a l'utilisateur si il veut équiper son personnage de l'arme en question
+            // si oui, on fait en sorte que le personnage.weapon = la nouvelle arme
+            //si c'est mage: arme de soin sinon arme d'attaque
         }
         else
         {
@@ -142,7 +141,7 @@ class Game {
     
  func random()->Bool
     {
-        let chestvalue = arc4random()
+        let chestvalue = Int.random(in:0...2)
         var value:Int = 0
         
         if(chestvalue == value)
@@ -161,15 +160,15 @@ class Game {
         print("Récapitulons, voici la liste des personnages par joueur:"
             + "\n L'équipe de \(player1.team_name) est composée de"
             + "\n"
-            + "\n1. \(player1.characters[0].name) de type \(player1.characters[0].type) avec: \(player1.characters[0].life) points de vie, une arme de type \(player1.characters[0].weapon) et une attaque de puissance \(player1.characters[0].attack)"
-            + "\n2. \(player1.characters[1].name) de type \(player1.characters[1].type) avec: \(player1.characters[1].life) points de vie, une arme de type \(player1.characters[1].weapon) et une attaque de puissance \(player1.characters[1].attack)"
-            + "\n3. \(player1.characters[2].name) de type \(player1.characters[2].type) avec: \(player1.characters[2].life) points de vie, une arme de type \(player1.characters[2].weapon) et une attaque de puissance \(player1.characters[2].attack)"
+            + "\n1. \(player1.characters[0].name) de type \(player1.characters[0].type) avec: \(player1.characters[0].life) points de vie, une arme de type \(player1.characters[0].weapon.name) et une attaque de puissance \(player1.characters[0].weapon.atk)"
+            + "\n2. \(player1.characters[1].name) de type \(player1.characters[1].type) avec: \(player1.characters[1].life) points de vie, une arme de type \(player1.characters[1].weapon) et une attaque de puissance \(player1.characters[1].weapon.atk)"
+            + "\n3. \(player1.characters[2].name) de type \(player1.characters[2].type) avec: \(player1.characters[2].life) points de vie, une arme de type \(player1.characters[2].weapon.name) et une attaque de puissance \(player1.characters[2].weapon.atk)"
             + "\n"
             + "\n L'équipe de \(player2.team_name) est composée de"
             + "\n"
-            + "\n1. \(player2.characters[0].name) de type \(player2.characters[0].type) avec: \(player2.characters[0].life) points de vie, une arme de type \(player2.characters[0].weapon) et une attaque de puissance \(player2.characters[0].attack)"
-            + "\n2. \(player2.characters[1].name) de type \(player2.characters[1].type) avec: \(player2.characters[1].life) points de vie, une arme de type \(player2.characters[1].weapon) et une attaque de puissance \(player2.characters[1].attack)"
-            + "\n3. \(player2.characters[2].name) de type \(player2.characters[2].type) avec: \(player2.characters[2].life) points de vie, une arme de type \(player2.characters[2].weapon) et une attaque de puissance \(player2.characters[2].attack)"
+            + "\n1. \(player2.characters[0].name) de type \(player2.characters[0].type) avec: \(player2.characters[0].life) points de vie, une arme de type \(player2.characters[0].weapon.name) et une attaque de puissance \(player2.characters[0].weapon.atk)"
+            + "\n2. \(player2.characters[1].name) de type \(player2.characters[1].type) avec: \(player2.characters[1].life) points de vie, une arme de type \(player2.characters[1].weapon.name) et une attaque de puissance \(player2.characters[1].weapon.atk)"
+            + "\n3. \(player2.characters[2].name) de type \(player2.characters[2].type) avec: \(player2.characters[2].life) points de vie, une arme de type \(player2.characters[2].weapon.name) et une attaque de puissance \(player2.characters[2].weapon.atk)"
             )
     }
     
