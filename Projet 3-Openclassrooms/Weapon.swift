@@ -20,8 +20,5 @@ class Weapon {
         ishealing = false
     }
     
-   /* func newweapon(target:Character)
-    {
-        var newweapon = Character.init(weapon:)
-    }*/
+   
 }

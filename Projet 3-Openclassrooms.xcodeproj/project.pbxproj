@@ -19,6 +19,7 @@
 		A2745880210522590036955F /* Javelin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274587F210522590036955F /* Javelin.swift */; };
 		A2745882210522750036955F /* Kalachnikov.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2745881210522750036955F /* Kalachnikov.swift */; };
 		A2874ABB20BB15190056AADC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2874ABA20BB15190056AADC /* Weapon.swift */; };
+		A2BA31B221203FA9002EF204 /* Cure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA31B121203FA9002EF204 /* Cure.swift */; };
 		A2FD8DC22118DB90000E5C69 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD8DC12118DB90000E5C69 /* Potion.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		A274587F210522590036955F /* Javelin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Javelin.swift; sourceTree = "<group>"; };
 		A2745881210522750036955F /* Kalachnikov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalachnikov.swift; sourceTree = "<group>"; };
 		A2874ABA20BB15190056AADC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		A2BA31B121203FA9002EF204 /* Cure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cure.swift; sourceTree = "<group>"; };
 		A2FD8DC12118DB90000E5C69 /* Potion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				A2013B2920B2CAE000E3C161 /* Team.swift */,
 				A2013B2120B2C9AE00E3C161 /* main.swift */,
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
+				A2BA31B121203FA9002EF204 /* Cure.swift */,
 				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
 				A2745881210522750036955F /* Kalachnikov.swift */,
 				A274587F210522590036955F /* Javelin.swift */,
@@ -162,6 +165,7 @@
 				A2745882210522750036955F /* Kalachnikov.swift in Sources */,
 				A2013B3120B2CAE100E3C161 /* Dwarf.swift in Sources */,
 				A2874ABB20BB15190056AADC /* Weapon.swift in Sources */,
+				A2BA31B221203FA9002EF204 /* Cure.swift in Sources */,
 				A2FD8DC22118DB90000E5C69 /* Potion.swift in Sources */,
 				A274587E2105222F0036955F /* Fire.swift in Sources */,
 				A2745880210522590036955F /* Javelin.swift in Sources */,

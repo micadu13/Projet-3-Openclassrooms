@@ -123,36 +123,26 @@ class Game {
     
     func chest(character:Character)
     {
-        if(random())
-        {
-           
+        
+            // Sett random to make appear sometimes the chest
             //on selectionne aléatoirement une arme dans le coffre
             //on demande a l'utilisateur si il veut équiper son personnage de l'arme en question
             // si oui, on fait en sorte que le personnage.weapon = la nouvelle arme
             //si c'est mage: arme de soin sinon arme d'attaque
-        }
-        else
-        {
-            print("Je ne comprends pas")
-        }
+        
+        
     }
     
    
-    
- func random()->Bool
+    func random_apparationcharacter()
     {
-        let chestvalue = Int.random(in:0...2)
-        var value:Int = 0
-        
-        if(chestvalue == value)
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
+        var chest_account = weapons_chest.count
+        var randomIndex = Int(arc4random_uniform(chest_account))
+        //Apparition au hasard des éléments du chest
+        // Si c'est le mage, apparition au hasard d'un coffre a soin
+        // Si c'est un personnage différent, apparition au hasard d'un coffre à arme
     }
+
     
 
     func completeListOfCharacters()
