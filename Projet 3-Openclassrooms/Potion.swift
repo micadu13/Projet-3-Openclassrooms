@@ -7,10 +7,10 @@
 //
 
 import Foundation
-class Potion:Weapon
+class Potion:Cure
 {
     init()
     {
-        super.init(name: "Kalachnikov", atk:0)
+        super.init(name: "Potion", atk:0, cure: 20)
     }
 }

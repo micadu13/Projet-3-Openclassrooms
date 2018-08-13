@@ -132,16 +132,6 @@ class Game {
         
         
     }
-    
-   
-    func random_apparationcharacter()
-    {
-        var chest_account = weapons_chest.count
-        var randomIndex = Int(arc4random_uniform(chest_account))
-        //Apparition au hasard des éléments du chest
-        // Si c'est le mage, apparition au hasard d'un coffre a soin
-        // Si c'est un personnage différent, apparition au hasard d'un coffre à arme
-    }
 
     
 
@@ -162,16 +152,6 @@ class Game {
             )
     }
     
-    
-    
-            
-        
-        
-
-  
-    
-
-
 
 
 }

@@ -24,12 +24,12 @@ class Character
     var resistance:Int
     var weapon:Weapon
     var type: String
-    var treatment: Int
+    var cure:Cure
     
     
-    init(name:String,type: String, life:Int,resistance:Int,weapon:Weapon, treatment:Int)
+    init(name:String,type: String, life:Int,resistance:Int,weapon:Weapon, cure:Cure)
     {
-        self.name = name; self.type = type;self.life = life;self.resistance = resistance; self.weapon = weapon; self.treatment = treatment
+        self.name = name; self.type = type;self.life = life;self.resistance = resistance; self.weapon = weapon; self.cure = cure
     }
         
     func atk(target:Character)
