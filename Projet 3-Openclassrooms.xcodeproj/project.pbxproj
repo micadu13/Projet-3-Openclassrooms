@@ -20,6 +20,8 @@
 		A2745882210522750036955F /* Kalachnikov.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2745881210522750036955F /* Kalachnikov.swift */; };
 		A2874ABB20BB15190056AADC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2874ABA20BB15190056AADC /* Weapon.swift */; };
 		A2BA31B221203FA9002EF204 /* Cure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA31B121203FA9002EF204 /* Cure.swift */; };
+		A2BA31B421218B7D002EF204 /* Energy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA31B321218B7D002EF204 /* Energy.swift */; };
+		A2BA31B621218CD7002EF204 /* Magnetism.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA31B521218CD7002EF204 /* Magnetism.swift */; };
 		A2FD8DC22118DB90000E5C69 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD8DC12118DB90000E5C69 /* Potion.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		A2745881210522750036955F /* Kalachnikov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalachnikov.swift; sourceTree = "<group>"; };
 		A2874ABA20BB15190056AADC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		A2BA31B121203FA9002EF204 /* Cure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cure.swift; sourceTree = "<group>"; };
+		A2BA31B321218B7D002EF204 /* Energy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy.swift; sourceTree = "<group>"; };
+		A2BA31B521218CD7002EF204 /* Magnetism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magnetism.swift; sourceTree = "<group>"; };
 		A2FD8DC12118DB90000E5C69 /* Potion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,8 @@
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
 				A2BA31B121203FA9002EF204 /* Cure.swift */,
 				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
+				A2BA31B321218B7D002EF204 /* Energy.swift */,
+				A2BA31B521218CD7002EF204 /* Magnetism.swift */,
 				A2745881210522750036955F /* Kalachnikov.swift */,
 				A274587F210522590036955F /* Javelin.swift */,
 				A274587D2105222F0036955F /* Fire.swift */,
@@ -170,9 +176,11 @@
 				A274587E2105222F0036955F /* Fire.swift in Sources */,
 				A2745880210522590036955F /* Javelin.swift in Sources */,
 				A2013B2F20B2CAE100E3C161 /* Fighter.swift in Sources */,
+				A2BA31B421218B7D002EF204 /* Energy.swift in Sources */,
 				A2013B3220B2CAE100E3C161 /* Giant.swift in Sources */,
 				A2013B3420B2CAE100E3C161 /* Mage.swift in Sources */,
 				A2013B3520B2CAE100E3C161 /* Character.swift in Sources */,
+				A2BA31B621218CD7002EF204 /* Magnetism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

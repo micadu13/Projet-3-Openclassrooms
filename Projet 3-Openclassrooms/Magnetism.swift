@@ -1,16 +1,16 @@
 //
-//  Potion.swift
+//  Magnetism.swift
 //  Projet 3-Openclassrooms
 //
-//  Created by Michael Aidan on 06/08/2018.
+//  Created by Michael Aidan on 13/08/2018.
 //  Copyright © 2018 Michael Aidan. All rights reserved.
 //
 
 import Foundation
-class Potion:Cure
+class Magnetism:Cure
 {
     init()
     {
-        super.init(name: "Potion", cure_value: 20)
+        super.init(name: "Magnetism", cure_value: 50)
     }
 }

@@ -12,10 +12,12 @@ class Game {
     var player1:Team
     var player2:Team
     var weapons_chest:[Weapon] = [Kalachnikov(),Javelin(),Fire()]
-    
+    var treatments_chest:[Cure] = [Potion(),Energy(),Magnetism()]
+   
     
     init()
     {
+        
         //Introduction: démarrage du jeu
         print("Bienvenue dans ce nouveau jeu de combats à mort à 2 équipes")
         print("\n")
@@ -39,7 +41,6 @@ class Game {
         // Récapitulation joueur 1 et joueur 2
         print("\n")
         completeListOfCharacters()
-        
 }
     
     func deadTeam(_ team:Team)->Bool
@@ -121,16 +122,54 @@ class Game {
             }
     }
     
-    func chest(character:Character)
+    func chest(character_chosen:Team,weapon_chosen:Weapon,treatment_chosen:Cure)
     {
+        if(chestapparition())
+        {
+            
+            let character_tochoose = character_chosen.PlayingWithTheCharacters()
+            var weapon_tochoose = weapon_chosen.PlayingWithTheWeapons()
+            
+            
+            
+            if let mage = character_tochoose as? Mage
+            {
+                var treatment_tochoose = treatment_chosen.PlayingWithTheTreatments()
+                
+                if let chest_treatement_count = treatments_chest.count as? Int
+                {
+                    var chest_treatment_random_Index = arc4random_uniform(UInt32(chest_treatement_count))
+                }
+            }
+            else
+            {
+                
+            }
         
+            
+        }
             // Sett random to make appear sometimes the chest
             //on selectionne aléatoirement une arme dans le coffre
             //on demande a l'utilisateur si il veut équiper son personnage de l'arme en question
             // si oui, on fait en sorte que le personnage.weapon = la nouvelle arme
             //si c'est mage: arme de soin sinon arme d'attaque
+
+    }
+    
+    func chestapparition()->Bool
+    {
+        var random = arc4random_uniform(3)
+        var random_value = 0
         
-        
+        if(random == random_value)
+        {
+            return true
+            
+        }
+        else
+        {
+            return false
+        }
     }
 
     
