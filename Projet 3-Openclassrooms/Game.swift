@@ -148,9 +148,8 @@ class Game {
             else
             {
                 var weapon_chosen = weapontochoose.PlayingWithTheWeapons()
-                {
-                    weapon_chosen = character_chosen.weapon
-                }
+                weapon_chosen = character_chosen.weapon
+                
             }
            
             
