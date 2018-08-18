@@ -19,13 +19,9 @@ class Team
     init()
     {
         self.setTeamName()
-        //self.printTeamName()
-        //self.chooseCharacter()
        
     }
     
-
- 
     
     func setTeamName()
     {
@@ -40,12 +36,7 @@ class Team
         
     }
     
-   /* func printTeamName()
-    {
-        
-        print("Le nom de votre équipe est \(self.team_name)")
-    }
-    */
+ 
     func chooseCharacter()
     {
         
@@ -223,7 +214,101 @@ class Team
                 
             } while(!entryOk)
 
+    }
+    
+    func PlayingWithTheWeapons()-> Weapon
+    {
+        
+        
+        print("1. Tapez 1 pour \(Game.init().weapons_chest[0].name), attaque : \(Game.init().weapons_chest[0].atk)"
+            + "\n2.Tapez 2 pour:\(Game.init().weapons_chest[1].name), vie : \(Game.init().weapons_chest[1].atk) "
+            + "\n3.Tapez 3 pour: \(Game.init().weapons_chest[2].name), vie : \(Game.init().weapons_chest[2].atk)")
+        let entryOk:Bool = false
+        repeat
+        {
+            
+            
+            if let choice = readLine()
+            {
+                var weapon:Weapon?
+                
+                switch choice
+                {
+                case "1":
+                    weapon = Game.init().weapons_chest[0]
+                    
+                case "2":
+                    weapon = Game.init().weapons_chest[1]
+                    
+                case "3":
+                    weapon = Game.init().weapons_chest[2]
+                    
+                default:
+                    print("Je ne comprends pas, veuillez rééssayer")
+                    
+                }
+                if let selectedweapon = weapon
+                {
+                    print("Vous avez choisi le \(selectedweapon.name), attaque: \(selectedweapon.atk )")
+                    
+                }
+                else
+                {
+                    return PlayingWithTheWeapons()
+                }
+            }
+            
+            
+            
+        } while(!entryOk)
+        
+    }
 
-  
-}
+    func PlayingWithTheTreatments()-> Cure
+    {
+        
+        
+        print("1. Tapez 1 pour \(Game.init().treatments_chest[0].name), soin : \(Game.init().treatments_chest[0].cure_value)"
+            + "\n2.Tapez 2 pour:\(Game.init().treatments_chest[1].name), soin : \(Game.init().treatments_chest[1].cure_value) "
+            + "\n3.Tapez 3 pour: \(Game.init().treatments_chest[2].name), soin : \(Game.init().treatments_chest[2].cure_value)")
+        let entryOk:Bool = false
+        repeat
+        {
+            
+            
+            if let choice = readLine()
+            {
+                var treatment:Cure?
+                
+                switch choice
+                {
+                case "1":
+                    treatment = Game.init().treatments_chest[0]
+                    
+                case "2":
+                    treatment = Game.init().treatments_chest[1]
+                    
+                case "3":
+                    treatment = Game.init().treatments_chest[2]
+                    
+                default:
+                    print("Je ne comprends pas, veuillez rééssayer")
+                    
+                }
+                if let selectedtreatment = treatment
+                {
+                    print("Vous avez choisi le \(selectedtreatment.name), soin: \(selectedtreatment.cure_value )")
+                    
+                }
+                else
+                {
+                    return PlayingWithTheTreatments()
+                }
+            }
+            
+            
+            
+        } while(!entryOk)
+        
+    }
 }

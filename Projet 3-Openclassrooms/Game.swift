@@ -13,11 +13,15 @@ class Game {
     var player2:Team
     var weapons_chest:[Weapon] = [Kalachnikov(),Javelin(),Fire()]
     var treatments_chest:[Cure] = [Potion(),Energy(),Magnetism()]
-   
+
     
-    init()
+    init()//weapons_chest:[Weapon], treatments_chest:[Cure], //player1:Team, player2:Team, character_chosen:Character
     {
-        
+        /*self.weapons_chest = weapons_chest;
+        self.treatments_chest = treatments_chest;
+        self.player1 = player1;
+        self.player2 = player2;
+        */
         //Introduction: démarrage du jeu
         print("Bienvenue dans ce nouveau jeu de combats à mort à 2 équipes")
         print("\n")
@@ -42,6 +46,9 @@ class Game {
         print("\n")
         completeListOfCharacters()
 }
+    
+   
+    
     
     func deadTeam(_ team:Team)->Bool
     {
@@ -122,30 +129,30 @@ class Game {
             }
     }
     
-    func chest(character_chosen:Team,weapon_chosen:Weapon,treatment_chosen:Cure)
+    func chest(charactertochoose:Team, weapontochoose:Team, treatmenttochoose:Team)
     {
+        //character_chosen is applied to function PlayingWithTheCharacters which will be in Team Class
+        //weapon_chosen is applied to function PlayingWithTheWeapons which will be in Team Class
+        //treamtent_chosen is applied to function PlayingWithTreatment which will be in Team Class
+        
         if(chestapparition())
         {
+            let character_chosen = charactertochoose.PlayingWithTheCharacters()
             
-            let character_tochoose = character_chosen.PlayingWithTheCharacters()
-            var weapon_tochoose = weapon_chosen.PlayingWithTheWeapons()
-            
-            
-            
-            if let mage = character_tochoose as? Mage
+            if let mage = character_chosen as? Mage
             {
-                var treatment_tochoose = treatment_chosen.PlayingWithTheTreatments()
+                var treatment_chosen = treatmenttochoose.PlayingWithTheTreatments()
+                treatment_chosen = character_chosen.cure
                 
-                if let chest_treatement_count = treatments_chest.count as? Int
-                {
-                    var chest_treatment_random_Index = arc4random_uniform(UInt32(chest_treatement_count))
-                }
             }
             else
             {
-                
+                var weapon_chosen = weapontochoose.PlayingWithTheWeapons()
+                {
+                    weapon_chosen = character_chosen.weapon
+                }
             }
-        
+           
             
         }
             // Sett random to make appear sometimes the chest
@@ -158,7 +165,7 @@ class Game {
     
     func chestapparition()->Bool
     {
-        var random = arc4random_uniform(3)
+        let random = arc4random_uniform(3)
         var random_value = 0
         
         if(random == random_value)

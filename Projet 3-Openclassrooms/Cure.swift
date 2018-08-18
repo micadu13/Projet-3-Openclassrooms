@@ -20,14 +20,8 @@ class Cure {
         ishealing = true
     }
     
-    func PlayingWithTheTreatments()
-    {
-        let treatment1 = Game.init().treatments_chest[0]
-        let treatment2 = Game.init().treatments_chest[1]
-        let treatment3 = Game.init().treatments_chest[2]
-        print("Le coffre à soin a été ouvert." +
-        "")
+    
         
     
     }
-}
+
