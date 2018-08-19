@@ -25,24 +25,24 @@ class Game {
         //Introduction: démarrage du jeu
         print("Bienvenue dans ce nouveau jeu de combats à mort à 2 équipes")
         print("\n")
-        //Demande au joueur 1 de nommer son équipe
+        //Asking to player 1 to name his/her team
         print("Joueur 1, veuillez svp nommer votre équipe")
         self.player1 = Team()
         print("Joueur 1, votre équipe s'appelle \(player1.team_name)")
         print("\n")
-        //Demande au joueur 2 de nommer son équipe
+        //Asking to player 2 to name his/her team
         print("Joueur 2, veuillez svp nommer votre équipe")
         self.player2 = Team()
         print("Joueur 2, votre équipe s'appelle \(player2.team_name)")
         print("\n")
-        //Le joueur 1 choisit ses personnages
+        //Player 1 chooses its characters
         print("\(player1.team_name), c'est à vous")
         player1.chooseCharacter()
         print("\n")
-        // Le joueur 2 choisit ses personnages
+        // Player 2 chooses its characters
         print("\(player2.team_name), c'est à vous")
         player2.chooseCharacter()
-        // Récapitulation joueur 1 et joueur 2
+        // Sum-up for player 1 & 2 
         print("\n")
         completeListOfCharacters()
 }
@@ -113,7 +113,6 @@ class Game {
             if let mage = actionCharacter as? Mage
             {
                  // Put the chest func
-
                 
                 let healedCharacter = attakingplayer.PlayingWithTheCharacters()
                 mage.heal(target: healedCharacter)
@@ -156,7 +155,7 @@ class Game {
             
                 var treatment_chosen = treatmenttochoose.PlayingWithTheTreatments()
                treatment_chosen = character_chosen.cure
-                
+
             }
             else
             {
