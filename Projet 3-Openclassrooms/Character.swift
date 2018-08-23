@@ -37,9 +37,7 @@ class Character
         if life>0
         {
             target.life -= self.weapon.atk
-            //target.life -= self.attack
             
-           
         }
         
     }
