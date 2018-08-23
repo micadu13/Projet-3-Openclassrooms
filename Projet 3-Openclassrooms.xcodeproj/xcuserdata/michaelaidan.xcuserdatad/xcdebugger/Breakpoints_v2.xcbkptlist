@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Projet 3-Openclassrooms/Character.swift"
-            timestampString = "551135957.184366"
+            timestampString = "555275111.368969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -19,14 +19,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Projet_3_Openclassrooms.Character.resistance.getter : Swift.Int"
                   moduleName = "Projet 3-Openclassrooms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michaelaidan/Documents/OpenClassrooms%20Formation/Parcours%20DAiOS/Projets/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Character.swift"
-                  timestampString = "551646572.5448231"
+                  timestampString = "553194721.556613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -34,14 +34,14 @@
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Projet_3_Openclassrooms.Character.resistance.setter : Swift.Int"
                   moduleName = "Projet 3-Openclassrooms"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/michaelaidan/Documents/OpenClassrooms%20Formation/Parcours%20DAiOS/Projets/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Projet%203-Openclassrooms/Character.swift"
-                  timestampString = "551646572.547965"
+                  timestampString = "553194721.560351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -49,6 +49,38 @@
                   offsetFromSymbolStart = "77">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet 3-Openclassrooms/Team.swift"
+            timestampString = "556745784.229033"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "unique_name_character()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Projet 3-Openclassrooms/Team.swift"
+            timestampString = "556745784.229125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "presentationCharacter()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,5 +10,6 @@ import Foundation
 
 print("Hello, World!")
 var jeu = Game()
+jeu.atourderole()
 
 

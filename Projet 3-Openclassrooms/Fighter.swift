@@ -12,7 +12,7 @@ class Fighter:Character
     init(name:String)
     {
         
-        super.init(name:name,life: 100,attaque: 10,resistance: 30,arme:"Epée")
+        super.init(name:name,type: "Fighter",life:100,resistance: 30,weapon:Weapon(name:"Sword",atk:10),cure:Cure(name:"No Cure",cure_value:0))
         
     }
 }

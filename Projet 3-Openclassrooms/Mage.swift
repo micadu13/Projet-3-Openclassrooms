@@ -12,7 +12,17 @@ class Mage:Character
     init(name:String)
     {
         
-        super.init(name:name,life: 80,attaque: -20,resistance: 5,arme:"Potion")
+        super.init(name:name,type:"Mage",life:80,resistance:5,weapon:Weapon(name:"No Weapon",atk:0),cure:Cure(name:"Potion",cure_value:20))
+        
+    }
+    func heal(target:Character)
+    {
+       //target.life += self.cure
+       // Setting function to heal/cure a character
+        let cure = self.cure.cure_value
+        target.life += cure
+        
         
     }
 }
+

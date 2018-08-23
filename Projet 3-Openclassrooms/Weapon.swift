@@ -9,4 +9,18 @@
 import Foundation
 class Weapon {
    //Le coffre au trésor des armes
+    
+    var name:String
+    var atk:Int
+    var ishealing:Bool
+    
+    init(name:String, atk:Int)
+    {
+        self.name = name; self.atk = atk
+        ishealing = false
+    }
+   
+    
+    
+   
 }

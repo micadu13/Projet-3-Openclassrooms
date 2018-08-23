@@ -21,18 +21,41 @@ class Character
     }
     var name:String
     var life:Int
-    var attaque:Int
     var resistance:Int
-    var arme:String
+    var weapon:Weapon
+    var type: String
+    var cure:Cure
     
-    init(name:String,life:Int,attaque:Int,resistance:Int,arme:String)
+    
+    init(name:String,type: String, life:Int,resistance:Int,weapon:Weapon, cure:Cure)
     {
-        self.name = name;self.life = life;self.attaque = attaque; self.resistance = resistance;self.arme = arme
+        self.name = name; self.type = type;self.life = life;self.resistance = resistance; self.weapon = weapon; self.cure = cure
     }
         
-    func atk(cible:Character)
+    func atk(target:Character)
     {
-        cible.life -= self.attaque
+        if life>0
+        {
+            target.life -= self.weapon.atk
+            
+        }
+        
     }
-}
+    
+    func recovery()
+    {
+        if life < 30
+        {
+            
+            self.life += self.resistance
+            print("La vie de votre personnage était inférieure à 30, nous venons lui donner plus de vie")
+            
+        }
+    }
+    
+    
+    
+   
+ 
+ }
 
