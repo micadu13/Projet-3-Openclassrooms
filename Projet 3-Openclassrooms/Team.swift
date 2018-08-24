@@ -164,9 +164,9 @@ class Team
     {
        
 
-        print("1. Tapez 1 pour \(characters[0].name), vie : \(characters[0].life)"
-                + "\n2.Tapez 2 pour:\(characters[1].name), vie : \(characters[1].life) "
-                + "\n3.Tapez 3 pour: \(characters[2].name), vie : \(characters[2].life)")
+        print("1. Tapez 1 pour \(characters[0].name),de type : \(characters[0].type) et de vie : \(characters[0].life)"
+            + "\n2.Tapez 2 pour:\(characters[1].name), de type: \(characters[1].type) et de vie : \(characters[1].life) "
+                + "\n3.Tapez 3 pour: \(characters[2].name), de type \(characters[0].type) et de vie : \(characters[2].life)")
             let entryOk:Bool = false
             repeat
             {
@@ -193,7 +193,7 @@ class Team
                     }
                     if let selectedcharacter = character
                     {
-                        print("Vous avez choisi le \(selectedcharacter.type) qui s'appelle \(selectedcharacter.name) )")
+                        print("Vous avez choisi le \(selectedcharacter.type) qui s'appelle \(selectedcharacter.name) de type \(selectedcharacter.type) et de vie \(selectedcharacter.life)")
                         if(selectedcharacter.life > 0)
                         {
                             return selectedcharacter

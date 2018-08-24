@@ -97,14 +97,30 @@
 				A2013B2120B2C9AE00E3C161 /* main.swift */,
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
 				A2BA31B121203FA9002EF204 /* Cure.swift */,
-				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
+				A275D558212F4871008A2D65 /* Cure */,
 				A2BA31B321218B7D002EF204 /* Energy.swift */,
 				A2BA31B521218CD7002EF204 /* Magnetism.swift */,
+				A275D557212F484A008A2D65 /* Weapons */,
+			);
+			path = "Projet 3-Openclassrooms";
+			sourceTree = "<group>";
+		};
+		A275D557212F484A008A2D65 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
 				A2745881210522750036955F /* Kalachnikov.swift */,
 				A274587F210522590036955F /* Javelin.swift */,
 				A274587D2105222F0036955F /* Fire.swift */,
 			);
-			path = "Projet 3-Openclassrooms";
+			name = Weapons;
+			sourceTree = "<group>";
+		};
+		A275D558212F4871008A2D65 /* Cure */ = {
+			isa = PBXGroup;
+			children = (
+				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
+			);
+			path = Cure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
