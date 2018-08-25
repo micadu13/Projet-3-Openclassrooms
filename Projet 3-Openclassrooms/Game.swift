@@ -60,7 +60,7 @@ class Game {
         }
     }
     
-  func atourderole()
+  func process()
   {
     
  
@@ -79,6 +79,8 @@ class Game {
     }
     if(deadTeam(player1))
     {
+        print("\n")
+        print("---- ✌️ Victoire de \(player2.team_name)!! ✌️ --- ")
         print("Bravo \(player2.team_name) vous avez gagné. Votre équipe était donc composée de:" +
             "\n1. \(player2.characters[0].name) de type:  \(player2.characters[0].type) avec \(player2.characters[0].life) points de vie, ainsi que,"
             +
@@ -87,6 +89,8 @@ class Game {
     }
     else
     {
+        print("\n")
+        print("---- ✌️ Victoire de \(player1.team_name)!! ✌️ --- ")
         print("Bravo \(player1.team_name) vous avez gagné. Votre équipe était donc composée de:" +
             "\n1. \(player1.characters[0].name) de type:  \(player1.characters[0].type) avec \(player1.characters[0].life) points de vie, ainsi que,"
             +
@@ -102,9 +106,9 @@ class Game {
     {
        
            print("\n")
-           print("\(attakingplayer.team_name), c'est à vous, attaquez ")
+           print("\(attakingplayer.team_name), c'est à vous, attaquez!! ✊ ")
             print("Choisissez un personnage qui va attaquer ")
-       
+            print("\n")
             
         let actionCharacter = attakingplayer.PlayingWithTheCharacters()
         chest(target: actionCharacter)
@@ -117,7 +121,8 @@ class Game {
             }
             else
             {
-                print("Choisisez le personnage que vous allez cibler")
+                print("Choisisez le personnage que vous allez cibler  ")
+                print("\n")
                 let targetCharacter = defendingplayer.PlayingWithTheCharacters()
                 actionCharacter.atk(target:targetCharacter)
                 print("Le personnage \(targetCharacter.name) de l'équipe  de \(defendingplayer.team_name) a été attaqué par \(actionCharacter.name) de l'équipe \(attakingplayer.team_name) et a \(targetCharacter.life) points de vie")

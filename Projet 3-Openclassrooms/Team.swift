@@ -56,7 +56,7 @@ class Team
     
     func presentationCharacter()
     {
-            print("Veuillez choisir un personnage dans la liste suivante. Rapper, vous devez en choisir 3 maximum: "
+            print("Veuillez choisir un personnage dans la liste suivante. Rappel, vous devez en choisir 3 maximum: "
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
                 + "\n3: Un Giant"

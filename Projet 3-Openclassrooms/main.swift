@@ -9,7 +9,7 @@
 import Foundation
 
 print("Hello, World!")
-var jeu = Game()
-jeu.atourderole()
+var game = Game()
+game.process()
 
 
