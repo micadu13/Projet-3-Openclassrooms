@@ -56,11 +56,13 @@ class Team
     
     func presentationCharacter()
     {
+            
             print("Veuillez choisir un personnage dans la liste suivante. Rappel, vous devez en choisir 3 maximum: "
                 + "\n1: Un Fighter"
                 + "\n2: Un Mage"
                 + "\n3: Un Giant"
                 + "\n4: Un Dwarf")
+            print("\n")
             if let choice = readLine()
             {
                 switch choice
@@ -74,6 +76,7 @@ class Team
                     let fighter = Fighter(name:fighter_name)
                     characters.append(fighter)
                     print("Votre fighter s'appelle \(fighter.name)")
+                    print("\n")
                     
                     case "2":
                     print("Vous avez choisi le Mage")
@@ -83,6 +86,7 @@ class Team
                     let mage = Mage(name:mage_name)
                     characters.append(mage)
                     print("Votre mage s'appelle \(mage.name)")
+                    print("\n")
                     
                     case "3":
                     print("Vous avez choisi le Giant")
@@ -92,6 +96,7 @@ class Team
                     let giant = Giant(name:giant_name)
                     characters.append(giant)
                     print("Votre giant s'appelle \(giant.name)")
+                    print("\n")
                     
                     case "4":
                     print("Vous avez choisi le Dwarf")
@@ -101,9 +106,11 @@ class Team
                     let dwarf = Dwarf(name:dwarf_name)
                     characters.append(dwarf)
                     print("Votre dwarf s'appelle \(dwarf.name)")
+                    print("\n")
                     
                     default:
                         print("Je ne comprends pas, veuillez rééssayer")
+                        print("\n")
                 }
             }
         
@@ -114,7 +121,9 @@ class Team
     {
         for personnage in characters
         {
-            print("Récapitulons, votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
+            print("\(team_name)")
+            print("Récapitulons,  votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
+            
         }
         
     }

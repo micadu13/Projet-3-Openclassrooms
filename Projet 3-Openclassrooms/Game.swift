@@ -19,7 +19,7 @@ class Game {
     init()
     {
     
-        //Introduction: démarrage du jeu
+        //Introduction: starting of the game
         print("Bienvenue dans ce nouveau jeu de combats à mort à 2 équipes")
         print("\n")
         //Asking to player 1 to name his/her team
