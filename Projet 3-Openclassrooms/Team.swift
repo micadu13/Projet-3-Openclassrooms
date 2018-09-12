@@ -119,10 +119,11 @@ class Team
    
     func recapCharacter()
     {
+        print("\(team_name) récapitulons:")
         for personnage in characters
         {
-            print("\(team_name)")
-            print("Récapitulons,  votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
+            
+            print("Votre personnage de type \(personnage.type) s'appelle \(personnage.name) et il a \(personnage.life) points de vie.")
             
         }
         

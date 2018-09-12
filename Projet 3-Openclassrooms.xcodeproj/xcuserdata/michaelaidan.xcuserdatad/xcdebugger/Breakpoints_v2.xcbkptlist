@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Projet 3-Openclassrooms/Team.swift"
-            timestampString = "556992318.119648"
+            timestampString = "557177809.6535209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "Team"
-            landmarkType = "3">
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "checkuniquename_character(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Projet 3-Openclassrooms/Team.swift"
-            timestampString = "556992318.120177"
+            timestampString = "557177809.8625751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"

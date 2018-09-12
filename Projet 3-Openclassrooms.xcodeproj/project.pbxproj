@@ -88,21 +88,27 @@
 			isa = PBXGroup;
 			children = (
 				A2013B2E20B2CAE100E3C161 /* Character.swift */,
-				A2013B2A20B2CAE000E3C161 /* Dwarf.swift */,
-				A2013B2820B2CAE000E3C161 /* Fighter.swift */,
+				A20859EE2135CDDD001EACA6 /* different characters */,
 				A2013B2C20B2CAE100E3C161 /* Game.swift */,
-				A2013B2B20B2CAE000E3C161 /* Giant.swift */,
-				A2013B2D20B2CAE100E3C161 /* Mage.swift */,
 				A2013B2920B2CAE000E3C161 /* Team.swift */,
 				A2013B2120B2C9AE00E3C161 /* main.swift */,
 				A2874ABA20BB15190056AADC /* Weapon.swift */,
 				A2BA31B121203FA9002EF204 /* Cure.swift */,
 				A275D558212F4871008A2D65 /* Cure */,
-				A2BA31B321218B7D002EF204 /* Energy.swift */,
-				A2BA31B521218CD7002EF204 /* Magnetism.swift */,
 				A275D557212F484A008A2D65 /* Weapons */,
 			);
 			path = "Projet 3-Openclassrooms";
+			sourceTree = "<group>";
+		};
+		A20859EE2135CDDD001EACA6 /* different characters */ = {
+			isa = PBXGroup;
+			children = (
+				A2013B2A20B2CAE000E3C161 /* Dwarf.swift */,
+				A2013B2820B2CAE000E3C161 /* Fighter.swift */,
+				A2013B2B20B2CAE000E3C161 /* Giant.swift */,
+				A2013B2D20B2CAE100E3C161 /* Mage.swift */,
+			);
+			path = "different characters";
 			sourceTree = "<group>";
 		};
 		A275D557212F484A008A2D65 /* Weapons */ = {
@@ -118,6 +124,8 @@
 		A275D558212F4871008A2D65 /* Cure */ = {
 			isa = PBXGroup;
 			children = (
+				A2BA31B521218CD7002EF204 /* Magnetism.swift */,
+				A2BA31B321218B7D002EF204 /* Energy.swift */,
 				A2FD8DC12118DB90000E5C69 /* Potion.swift */,
 			);
 			path = Cure;
